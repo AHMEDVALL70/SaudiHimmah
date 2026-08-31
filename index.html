@@ -2546,7 +2546,18 @@
 .fixed-header .logo{direction:ltr}.fixed-header .logo>div:last-child{direction:rtl;text-align:right}
 .hero-content{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(220px,.75fr);align-items:center;gap:18px;text-align:left}.hero-content>.hero-corner-logo{position:static;grid-column:2;grid-row:1 / span 7;justify-self:center;display:flex;flex-direction:column;align-items:center;right:auto;top:auto}.hero-content>.hero-corner-logo .hero-brand-image{width:min(260px,24vw);height:auto;max-height:330px;object-fit:contain;}.hero-content>.hero-logo{display:none}.hero-content>.hero-title,.hero-content>.hero-subtitle,.hero-content>.hero-message,.hero-content>.hero-desc,.hero-content>.hero-buttons,.hero-content>.hero-stats{grid-column:1}.hero-content>.hero-title,.hero-content>.hero-subtitle,.hero-content>.hero-message,.hero-content>.hero-desc{text-align:left;margin-left:0;margin-right:0}.hero-content>.hero-buttons,.hero-content>.hero-stats{justify-content:flex-start}.ai-chatbot{display:block;position:fixed;z-index:50;left:18px;bottom:18px;direction:rtl;margin:0}.footer-brand{display:flex;flex-direction:column;align-items:center;gap:5px;margin-bottom:12px;color:var(--eval-text-gold);font-size:.8rem}.footer-brand img{width:42px;height:62px;object-fit:contain;border-radius:7px}@media(max-width:600px){.hero-content{display:flex;flex-direction:column;text-align:center}.hero-content>.hero-corner-logo{order:-1;align-self:center}.hero-content>.hero-corner-logo .hero-brand-image{width:150px;max-height:190px}.hero-content>.hero-title,.hero-content>.hero-subtitle,.hero-content>.hero-message,.hero-content>.hero-desc{text-align:center}.hero-content>.hero-buttons,.hero-content>.hero-stats{justify-content:center}.ai-chatbot{left:10px;bottom:74px}}
         }
-</style>
+
+        /* Final Hero cleanup: official logo remains only in the header */
+        .hero-content{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;max-width:860px!important;margin:0 auto!important}
+        .hero-content>.hero-logo,.hero-content>.hero-title,.hero-content>.hero-subtitle,.hero-content>.hero-message,.hero-content>.hero-desc,.hero-content>.hero-buttons,.hero-content>.hero-stats{grid-column:auto!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+        .hero-content>.hero-logo,.hero-corner-logo{display:none!important}
+        .hero-content>.hero-title{width:100%;margin-bottom:4px!important}
+        .hero-content>.hero-subtitle{width:100%;font-size:clamp(1.2rem,3vw,1.65rem)!important;line-height:1.35!important;color:rgba(255,255,255,.86)!important;font-weight:800!important;margin:0 auto 14px!important;direction:ltr!important}
+        .hero-content>.hero-message{max-width:100%;margin:4px auto 12px!important}
+        .hero-content>.hero-desc{max-width:680px!important;font-size:clamp(.9rem,1.6vw,1.02rem)!important;color:rgba(255,255,255,.62)!important;line-height:1.9!important}
+        .hero-content>.hero-buttons{width:100%;justify-content:center!important;align-items:center!important;margin-top:4px!important}
+        .hero-content>.hero-stats{width:100%;justify-content:center!important;margin-top:26px!important}
+    </style>
 </head>
 <body>
 
@@ -2651,15 +2662,14 @@
         HOME
         ========================================================== -->
         <div class="hero-section active" id="section-home">
-            <div class="hero-content">
-                <div class="hero-corner-logo" aria-label="همة المدينة العقارية"><img src="Himmat-Almedina.png" class="hero-brand-image" alt="همة المدينة العقارية" loading="eager"></div>
+            <div class="hero-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
                 <div class="hero-logo">
                     <i class="fa-solid fa-building"></i>
                 </div>
                 <h1 class="hero-title">
                     همة<span class="gold">المدينة</span>العقارية
                 </h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">🏛️ Himmat Al Madinah Real Estate</p>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Himmat Al Madinah Real Estate</p>
                 <p class="hero-message" data-i18n="hero_message">قرارك العقاري يبدأ من معرفة القيمة العادلة</p>
                 <p class="hero-desc" data-i18n="hero_desc">
                     نعمل في المدينة المنورة لنقدم خدمات عقارية مبنية على المعرفة بالسوق، ودقة المعلومة، ووضوح التعامل، لنساعد عملاءنا على اتخاذ القرار الأنسب؛ سواء كان الهدف السكن، الاستثمار، البيع أو إدارة الأملاك.
@@ -3722,7 +3732,7 @@ CONTACT
                 nav_offers: "العروض",
                 nav_faq: "الاسئلة الشائعة",
                 nav_contact: "تواصل",
-                hero_subtitle: "🏛️ همة المدينة العقارية",
+                hero_subtitle: "همة المدينة العقارية",
                 hero_message: "قرارك العقاري يبدأ من معرفة القيمة العادلة",
                 chatbot_button: "المساعد الذكي", chatbot_title: "مساعد همة الذكي", chatbot_placeholder: "اكتب سؤالك...", chatbot_welcome: "مرحباً، كيف أساعدك؟",
                 chat_quick_eval: "التقييم", chat_quick_add: "إضافة عقار", chat_quick_contact: "التواصل",
@@ -4053,7 +4063,7 @@ CONTACT
                 nav_testimonials: "Offers",
                 nav_faq: "FAQ",
                 nav_contact: "Contact Us",
-                hero_subtitle: "🏛️ Himmat Al Madinah Real Estate AI",
+                hero_subtitle: "Himmat Al Madinah Real Estate AI",
                 hero_message: "Your property decision starts with a fair value",
                 chatbot_button: "AI Assistant", chatbot_title: "Himmah AI Assistant", chatbot_placeholder: "Ask a question...", chatbot_welcome: "Hello, how can I help?",
                 chat_quick_eval: "Valuation", chat_quick_add: "Add Property", chat_quick_contact: "Contact",
@@ -4385,7 +4395,7 @@ CONTACT
                 nav_testimonials: "Offres",
                 nav_faq: "FAQ",
                 nav_contact: "Contact",
-                hero_subtitle: "🏛️ IA Himmat Al Madinah Real Estate",
+                hero_subtitle: "IA Himmat Al Madinah Real Estate",
                 hero_message: "Votre décision immobilière commence par une valeur juste",
                 chatbot_button: "Assistant intelligent", chatbot_title: "Assistant IA Himmah", chatbot_placeholder: "Écrivez votre question...", chatbot_welcome: "Bonjour, comment puis-je vous aider ?",
                 chat_quick_eval: "Évaluation", chat_quick_add: "Ajouter", chat_quick_contact: "Contact",
