@@ -113,6 +113,7 @@
 
         .fixed-header .logo {
             display: flex;
+            direction: ltr;
             align-items: center;
             gap: 6px;
             cursor: pointer;
@@ -2204,8 +2205,8 @@
     position: relative;
     transition: 0.3s;
 }
-.offer-card:hover {
-    transform: translateY(-3px);
+        .offer-status{position:absolute;top:10px;right:10px;padding:4px 8px;border-radius:999px;font-size:.62rem;font-weight:800}.offer-status.available{background:#d9f7e7;color:#087443}.offer-status.sold{background:#ffe0e0;color:#9b1c1c}.sheet-offer-card{position:relative}.offer-card:hover {
+            transform: translateY(-3px);
     border-color: var(--eval-text-gold);
 }
 .offer-discount {
@@ -2507,7 +2508,7 @@
 .custom-location-box h3 { color: var(--primary); font-size: 0.95rem; margin: 0 0 4px; }
 .custom-location-box p { color: var(--muted); font-size: 0.74rem; margin: 0 0 10px; }
 .custom-location-box .btn { margin-top: 4px; }
-.hero-content{position:relative}.hero-corner-logo{position:absolute;top:0;right:0;display:inline-flex;align-items:center;gap:5px;color:var(--eval-text-gold);font-size:.7rem;font-weight:800}.hero-corner-logo .hero-brand-image{width:42px;height:62px}.hero-message{display:inline-block;margin:5px auto 10px;padding:8px 16px;color:#fff;background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(255,255,255,.08));border:1px solid rgba(212,175,55,.58);border-radius:999px;font-size:clamp(.92rem,2vw,1.18rem);font-weight:800;box-shadow:0 8px 26px rgba(0,0,0,.18)}.ai-chatbot{position:fixed;z-index:50;left:18px;bottom:18px;direction:rtl}.ai-chat-toggle{display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;padding:10px 14px;border-radius:999px;color:#071a2d;background:var(--gold);font:inherit;font-size:.78rem;font-weight:800;box-shadow:0 9px 24px rgba(0,0,0,.25)}.ai-chat-panel{width:min(350px,calc(100vw - 30px));margin-bottom:9px;overflow:hidden;background:#fff;color:#10233b;border:1px solid rgba(212,175,55,.45);border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.28)}.ai-chat-head{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;color:#fff;background:linear-gradient(135deg,#0b2948,#123c62)}.ai-chat-head button{border:0;background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}.ai-chat-messages{max-height:245px;min-height:92px;overflow:auto;padding:11px;background:#f7f9fb;font-size:.78rem}.ai-msg{max-width:88%;margin:5px 0;padding:8px 10px;border-radius:11px;line-height:1.55;white-space:pre-wrap}.ai-msg.bot{background:#e8eef5;margin-left:auto}.ai-msg.user{background:#ead18a;margin-right:auto}.ai-chat-quick{display:flex;gap:5px;flex-wrap:wrap;padding:7px 10px 2px;background:#fff}.ai-chat-quick button{border:1px solid #d9bf61;border-radius:999px;padding:4px 8px;background:#fffaf0;color:#765b0a;cursor:pointer;font:inherit;font-size:.68rem}.ai-chat-form{display:flex;gap:6px;padding:9px;background:#fff}.ai-chat-form input{min-width:0;flex:1;border:1px solid #dce3ea;border-radius:9px;padding:8px;font:inherit;font-size:.78rem}.ai-chat-form button{width:38px;border:0;border-radius:9px;color:#fff;background:#0b2948;cursor:pointer}@media(max-width:600px){.ai-chatbot{left:10px;bottom:74px}.hero-corner-logo{right:4px;font-size:.62rem}.hero-message{max-width:92%}}
+.hero-content{position:relative}        .footer-brand{display:flex;flex-direction:column;align-items:center;gap:5px;margin-bottom:12px;color:var(--eval-text-gold);font-size:.8rem}.footer-brand img{width:42px;height:62px;object-fit:contain;border-radius:7px}.hero-corner-logo{position:absolute;top:0;right:0;display:inline-flex;align-items:center;gap:5px;color:var(--eval-text-gold);font-size:.7rem;font-weight:800}.hero-corner-logo .hero-brand-image{width:42px;height:62px}.hero-message{display:inline-block;margin:5px auto 10px;padding:8px 16px;color:#fff;background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(255,255,255,.08));border:1px solid rgba(212,175,55,.58);border-radius:999px;font-size:clamp(.92rem,2vw,1.18rem);font-weight:800;box-shadow:0 8px 26px rgba(0,0,0,.18)}.ai-chatbot{position:fixed;z-index:50;left:18px;bottom:18px;direction:rtl}.ai-chat-toggle{display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;padding:10px 14px;border-radius:999px;color:#071a2d;background:var(--gold);font:inherit;font-size:.78rem;font-weight:800;box-shadow:0 9px 24px rgba(0,0,0,.25)}.ai-chat-panel{width:min(350px,calc(100vw - 30px));margin-bottom:9px;overflow:hidden;background:#fff;color:#10233b;border:1px solid rgba(212,175,55,.45);border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.28)}.ai-chat-head{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;color:#fff;background:linear-gradient(135deg,#0b2948,#123c62)}.ai-chat-head button{border:0;background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}.ai-chat-messages{max-height:245px;min-height:92px;overflow:auto;padding:11px;background:#f7f9fb;font-size:.78rem}.ai-msg{max-width:88%;margin:5px 0;padding:8px 10px;border-radius:11px;line-height:1.55;white-space:pre-wrap}.ai-msg.bot{background:#e8eef5;margin-left:auto}.ai-msg.user{background:#ead18a;margin-right:auto}.ai-chat-quick{display:flex;gap:5px;flex-wrap:wrap;padding:7px 10px 2px;background:#fff}.ai-chat-quick button{border:1px solid #d9bf61;border-radius:999px;padding:4px 8px;background:#fffaf0;color:#765b0a;cursor:pointer;font:inherit;font-size:.68rem}.ai-chat-form{display:flex;gap:6px;padding:9px;background:#fff}.ai-chat-form input{min-width:0;flex:1;border:1px solid #dce3ea;border-radius:9px;padding:8px;font:inherit;font-size:.78rem}.ai-chat-form button{width:38px;border:0;border-radius:9px;color:#fff;background:#0b2948;cursor:pointer}@media(max-width:600px){.ai-chatbot{left:10px;bottom:74px}.hero-corner-logo{right:4px;font-size:.62rem}.hero-message{max-width:92%}}
 .contact-inquiry {
     margin-top: 22px;
     padding-top: 18px;
@@ -2657,8 +2658,7 @@
                 <p class="hero-subtitle" data-i18n="hero_subtitle">🏛️ Himmat Al Madinah Real Estate</p>
                 <p class="hero-message" data-i18n="hero_message">قرارك العقاري يبدأ من معرفة القيمة العادلة</p>
                 <p class="hero-desc" data-i18n="hero_desc">
-                    منصتك الذكية لتقدير القيم السوقية للعقارات في المملكة<br>
-                    بدقة وسرعة باستخدام أحدث خوارزميات الذكاء الاصطناعي
+                    نعمل في المدينة المنورة لنقدم خدمات عقارية مبنية على المعرفة بالسوق، ودقة المعلومة، ووضوح التعامل، لنساعد عملاءنا على اتخاذ القرار الأنسب؛ سواء كان الهدف السكن، الاستثمار، البيع أو إدارة الأملاك.
                 </p>
 
                 <div class="hero-buttons">
@@ -3595,7 +3595,8 @@ CONTACT
         <!-- ==========================================================
         FOOTER
         ========================================================== -->
-        <div class="footer">
+            <div class="footer">
+            <div class="footer-brand"><img src="Himmat-Almedina.png" alt="همة المدينة العقارية" loading="lazy"><strong>همة المدينة العقارية</strong></div>
             <div class="footer-links">
                 <a href="#" onclick="switchTab('privacy')" data-i18n="footer_privacy">🔒 سياسة الخصوصية</a>
                 <span class="sep">|</span>
@@ -3721,7 +3722,7 @@ CONTACT
                 chatbot_button: "المساعد الذكي", chatbot_title: "مساعد همة الذكي", chatbot_placeholder: "اكتب سؤالك...", chatbot_welcome: "مرحباً، كيف أساعدك؟",
                 chat_quick_eval: "التقييم", chat_quick_add: "إضافة عقار", chat_quick_contact: "التواصل",
                 chatbot_empty: "اكتب سؤالك أولاً.", chatbot_eval: "فتحت لك صفحة التقييم. أدخل بيانات العقار وسأساعدك في فهم النتيجة.", chatbot_add: "فتحت لك صفحة إضافة عقار، ويمكنك اختيار المدينة والحي أو إضافة مدينة جديدة.", chatbot_contact: "يمكنك التواصل معنا عبر واتساب من قسم التواصل.", chatbot_cities: "ندعم المدينة المنورة ومكة وجدة والرياض، مع إمكانية إضافة مدن وأحياء جديدة.", chatbot_help: "أستطيع مساعدتك في التقييم، إضافة عقار، معرفة المدن والأحياء، أو الوصول إلى قسم التواصل.",
-                hero_desc: "همة المدينة العقارية الذكية لتقدير القيم السوقية للعقارات في المملكة<br>بدقة وسرعة باستخدام أحدث خوارزميات الذكاء الاصطناعي",
+                hero_desc: "نعمل في المدينة المنورة لنقدم خدمات عقارية مبنية على المعرفة بالسوق، ودقة المعلومة، ووضوح التعامل، لنساعد عملاءنا على اتخاذ القرار الأنسب؛ سواء كان الهدف السكن، الاستثمار، البيع أو إدارة الأملاك.",
                 hero_btn_start: "ابدأ التقييم الآن",
                 hero_btn_about: "تعرف على المنصة",
                 stat_cities: "مدن مدعومة",
@@ -4052,7 +4053,7 @@ CONTACT
                 chatbot_button: "AI Assistant", chatbot_title: "Himmah AI Assistant", chatbot_placeholder: "Ask a question...", chatbot_welcome: "Hello, how can I help?",
                 chat_quick_eval: "Valuation", chat_quick_add: "Add Property", chat_quick_contact: "Contact",
                 chatbot_empty: "Please type a question first.", chatbot_eval: "I opened the valuation page. Enter the property details and I will help you understand the result.", chatbot_add: "I opened the Add Property page. You can choose a city and district or add a new city.", chatbot_contact: "You can contact us through WhatsApp from the Contact section.", chatbot_cities: "We support Madinah, Makkah, Jeddah and Riyadh, with the option to add more cities and districts.", chatbot_help: "I can help with valuation, adding a property, cities and districts, or contacting the team.",
-                hero_desc: "Your smart platform to estimate market values for properties in the Kingdom<br>with accuracy and speed using the latest AI algorithms",
+                hero_desc: "We work in Madinah to provide real estate services built on market knowledge, accurate information and clear dealings, helping clients make the right decision for living, investment, selling or property management.",
                 hero_btn_start: "Start Valuation Now",
                 hero_btn_about: "Learn About Platform",
                 stat_cities: "Cities Supported",
@@ -4384,7 +4385,7 @@ CONTACT
                 chatbot_button: "Assistant intelligent", chatbot_title: "Assistant IA Himmah", chatbot_placeholder: "Écrivez votre question...", chatbot_welcome: "Bonjour, comment puis-je vous aider ?",
                 chat_quick_eval: "Évaluation", chat_quick_add: "Ajouter", chat_quick_contact: "Contact",
                 chatbot_empty: "Écrivez d’abord une question.", chatbot_eval: "J’ai ouvert l’évaluation. Saisissez les données du bien et je vous aiderai à comprendre le résultat.", chatbot_add: "J’ai ouvert l’ajout d’un bien. Vous pouvez choisir une ville et un quartier ou ajouter une nouvelle ville.", chatbot_contact: "Vous pouvez nous contacter via WhatsApp depuis la section Contact.", chatbot_cities: "Nous couvrons Médine, La Mecque, Djeddah et Riyad, avec la possibilité d’ajouter d’autres villes et quartiers.", chatbot_help: "Je peux vous aider pour l’évaluation, l’ajout d’un bien, les villes et quartiers ou le contact.",
-                hero_desc: "Votre plateforme intelligente pour estimer les valeurs du marché immobilier au Royaume<br>avec précision et rapidité grâce aux derniers algorithmes d'IA",
+                hero_desc: "Nous travaillons à Médine pour proposer des services immobiliers fondés sur la connaissance du marché, la précision de l'information et la clarté des échanges, afin d'aider nos clients à choisir la meilleure option.",
                 hero_btn_start: "Commencer l'évaluation",
                 hero_btn_about: "Découvrir la plateforme",
                 stat_cities: "Villes supportées",
@@ -5560,7 +5561,7 @@ CONTACT
                 <section class="offer-detail-section"><h3>السطح</h3><ul><li>مجلس</li><li>دورة مياه ومغاسل</li><li>غرفة خادمة بدورة مياه</li><li>فناء خارجي</li></ul></section>
                 <section class="offer-detail-section"><h3>مميزات الوحدة</h3><ul><li>مؤثثة بالكامل</li><li>تكييف راكب</li><li>مطبخ راكب</li><li>موقفان للسيارات في القبو</li></ul></section>
                 <section class="offer-detail-section full"><h3>مميزات الموقع</h3><p>بالقرب من جامعة الإمام محمد بن سعود، وطريق أبي بكر الصديق، وطريق الأمير محمد بن سلمان.</p></section>
-                <section class="offer-detail-section"><h3>المسوق الحصري</h3><p>الدريم العقارية</p><p>📱 للتواصل: <a href="tel:+966502666220">0502666220</a> · <a href="tel:+966547022228">0547022228</a></p></section>
+                <section class="offer-detail-section"><h3>المسوق الحصري</h3><p>الدريم العقارية</p><p>للاستفسار، استخدم نموذج التواصل في الموقع.</p></section>
                 <section class="offer-detail-section"><h3>التراخيص</h3><ul><li>رخصة عقارية: 1200027687</li><li>ترخيص إعلاني: 721021227</li></ul></section>
                 <section class="offer-detail-section full"><h3>الموقع على الخريطة</h3><p><a href="https://maps.app.goo.gl/H8nTsdiuQSD58rgo9?g_st=ic" target="_blank" rel="noopener">فتح موقع العقار في خرائط Google</a></p></section>`;
             const modal = document.getElementById('offerDetailsModal');
@@ -6007,5 +6008,6 @@ CONTACT
         };
     </script>
 
-</body>
+    <script src="google-sheets-loader.js" defer></script>
+    </body>
 </html>
