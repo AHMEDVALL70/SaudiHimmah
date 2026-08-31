@@ -140,6 +140,7 @@
         .fixed-header .logo-text .gold {
             color: var(--gold);
         }
+        .fixed-header .logo-image-wrap{overflow:hidden;border-radius:8px;background:#111d2c}.brand-logo-image{width:100%;height:100%;object-fit:contain;object-position:center;display:block}.hero-brand-image{width:46px;height:66px;object-fit:contain;object-position:center;display:block;border-radius:7px;box-shadow:0 5px 15px rgba(0,0,0,.2)}
         .fixed-header .logo-sub {
             font-size: 0.4rem;
             font-weight: 400;
@@ -2262,6 +2263,7 @@
     font-weight: 900;
     color: var(--eval-text-gold);
 }
+.offer-detail-overlay{align-items:flex-start;padding:28px 14px;overflow-y:auto}.offer-detail-box{width:min(760px,100%);max-height:calc(100vh - 56px);overflow:auto;text-align:start;position:relative}.offer-detail-close{position:absolute;inset-inline-end:12px;top:8px;border:0;background:transparent;color:var(--primary);font-size:1.7rem;cursor:pointer}.offer-detail-heading{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);padding:4px 4px 13px;margin-bottom:14px}.offer-detail-heading i{color:#b88a14;font-size:1.25rem}.offer-detail-heading h2{font-size:1.15rem;color:var(--primary)}.offer-details-content{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.offer-detail-section{background:#f8fafc;border:1px solid #e5eaf0;border-radius:12px;padding:12px}.offer-detail-section.full{grid-column:1/-1}.offer-detail-section h3{color:var(--primary);font-size:.9rem;margin-bottom:6px}.offer-detail-section p,.offer-detail-section li{color:var(--text-secondary);font-size:.78rem;line-height:1.85}.offer-detail-section ul{padding-inline-start:19px;margin:0}.offer-detail-section a{color:#12649a;text-decoration:underline}.offer-detail-actions{display:flex;gap:9px;justify-content:flex-start;flex-wrap:wrap;margin-top:15px}@media(max-width:600px){.offer-details-content{grid-template-columns:1fr}.offer-detail-section.full{grid-column:auto}.offer-detail-box{max-height:calc(100vh - 28px)}}
 
 /* ============================================================
    SERVICES
@@ -2470,7 +2472,7 @@
     color: var(--text-secondary);
     line-height: 1.7;
 }
-.purpose-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 20px}.purpose-card{padding:18px;border:1px solid rgba(201,168,76,.38);border-radius:16px;background:linear-gradient(145deg,#fffdf5,#f8fafc);box-shadow:0 8px 20px rgba(15,36,64,.06);transition:transform .18s ease,box-shadow .18s ease}.purpose-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(15,36,64,.12)}.purpose-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--gold-gradient);color:var(--primary);margin-bottom:10px}.purpose-card h3{color:var(--primary);font-size:1rem;margin-bottom:7px}.purpose-card p{color:var(--text-secondary);font-size:.8rem;line-height:1.9}.purpose-goal{background:linear-gradient(145deg,#f5f9ff,#fffdf5)}.service-card{min-height:178px}.service-desc{line-height:1.75}@media(max-width:760px){.purpose-grid{grid-template-columns:1fr}.purpose-card{padding:15px}}
+.tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.tool-card{padding:16px;border:1px solid rgba(212,175,55,.3);border-radius:16px;background:rgba(255,255,255,.04)}.tool-heading{display:flex;align-items:center;gap:8px;color:var(--eval-text-gold);margin-bottom:6px}.tool-heading h3{font-size:.95rem}.tool-card p{color:rgba(255,255,255,.65);font-size:.76rem;line-height:1.7;margin-bottom:10px}.tool-card iframe{width:100%;height:190px;border:0;border-radius:11px;margin-bottom:9px}.finance-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.finance-form label{display:flex;flex-direction:column;gap:4px;color:rgba(255,255,255,.72);font-size:.72rem}.finance-form input{width:100%;padding:8px;border-radius:8px;border:1px solid var(--eval-input-border);background:rgba(255,255,255,.08);color:#fff;font:inherit}.finance-result{margin-top:13px;padding:12px;border-radius:12px;background:rgba(212,175,55,.12);color:#fff;display:flex;flex-direction:column;gap:5px}.finance-result strong{color:var(--eval-text-gold);font-size:1.25rem}.finance-result small{color:rgba(255,255,255,.55);font-size:.65rem;line-height:1.5}.purpose-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 20px}.purpose-card{padding:18px;border:1px solid rgba(201,168,76,.38);border-radius:16px;background:linear-gradient(145deg,#fffdf5,#f8fafc);box-shadow:0 8px 20px rgba(15,36,64,.06);transition:transform .18s ease,box-shadow .18s ease}.purpose-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(15,36,64,.12)}.purpose-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--gold-gradient);color:var(--primary);margin-bottom:10px}.purpose-card h3{color:var(--primary);font-size:1rem;margin-bottom:7px}.purpose-card p{color:var(--text-secondary);font-size:.8rem;line-height:1.9}.purpose-goal{background:linear-gradient(145deg,#f5f9ff,#fffdf5)}.service-card{min-height:178px}.service-desc{line-height:1.75}@media(max-width:760px){.purpose-grid{grid-template-columns:1fr}.tools-grid{grid-template-columns:1fr}.purpose-card{padding:15px}}
 @media (max-width: 640px) {
     .offers-grid, .services-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 }
@@ -2505,7 +2507,7 @@
 .custom-location-box h3 { color: var(--primary); font-size: 0.95rem; margin: 0 0 4px; }
 .custom-location-box p { color: var(--muted); font-size: 0.74rem; margin: 0 0 10px; }
 .custom-location-box .btn { margin-top: 4px; }
-.hero-content{position:relative}.hero-corner-logo{position:absolute;top:0;right:0;display:inline-flex;align-items:center;gap:5px;color:var(--eval-text-gold);font-size:.7rem;font-weight:800}.hero-message{display:inline-block;margin:5px auto 10px;padding:8px 16px;color:#fff;background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(255,255,255,.08));border:1px solid rgba(212,175,55,.58);border-radius:999px;font-size:clamp(.92rem,2vw,1.18rem);font-weight:800;box-shadow:0 8px 26px rgba(0,0,0,.18)}.ai-chatbot{position:fixed;z-index:50;left:18px;bottom:18px;direction:rtl}.ai-chat-toggle{display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;padding:10px 14px;border-radius:999px;color:#071a2d;background:var(--gold);font:inherit;font-size:.78rem;font-weight:800;box-shadow:0 9px 24px rgba(0,0,0,.25)}.ai-chat-panel{width:min(350px,calc(100vw - 30px));margin-bottom:9px;overflow:hidden;background:#fff;color:#10233b;border:1px solid rgba(212,175,55,.45);border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.28)}.ai-chat-head{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;color:#fff;background:linear-gradient(135deg,#0b2948,#123c62)}.ai-chat-head button{border:0;background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}.ai-chat-messages{max-height:245px;min-height:92px;overflow:auto;padding:11px;background:#f7f9fb;font-size:.78rem}.ai-msg{max-width:88%;margin:5px 0;padding:8px 10px;border-radius:11px;line-height:1.55;white-space:pre-wrap}.ai-msg.bot{background:#e8eef5;margin-left:auto}.ai-msg.user{background:#ead18a;margin-right:auto}.ai-chat-quick{display:flex;gap:5px;flex-wrap:wrap;padding:7px 10px 2px;background:#fff}.ai-chat-quick button{border:1px solid #d9bf61;border-radius:999px;padding:4px 8px;background:#fffaf0;color:#765b0a;cursor:pointer;font:inherit;font-size:.68rem}.ai-chat-form{display:flex;gap:6px;padding:9px;background:#fff}.ai-chat-form input{min-width:0;flex:1;border:1px solid #dce3ea;border-radius:9px;padding:8px;font:inherit;font-size:.78rem}.ai-chat-form button{width:38px;border:0;border-radius:9px;color:#fff;background:#0b2948;cursor:pointer}@media(max-width:600px){.ai-chatbot{left:10px;bottom:74px}.hero-corner-logo{right:4px;font-size:.62rem}.hero-message{max-width:92%}}
+.hero-content{position:relative}.hero-corner-logo{position:absolute;top:0;right:0;display:inline-flex;align-items:center;gap:5px;color:var(--eval-text-gold);font-size:.7rem;font-weight:800}.hero-corner-logo .hero-brand-image{width:42px;height:62px}.hero-message{display:inline-block;margin:5px auto 10px;padding:8px 16px;color:#fff;background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(255,255,255,.08));border:1px solid rgba(212,175,55,.58);border-radius:999px;font-size:clamp(.92rem,2vw,1.18rem);font-weight:800;box-shadow:0 8px 26px rgba(0,0,0,.18)}.ai-chatbot{position:fixed;z-index:50;left:18px;bottom:18px;direction:rtl}.ai-chat-toggle{display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;padding:10px 14px;border-radius:999px;color:#071a2d;background:var(--gold);font:inherit;font-size:.78rem;font-weight:800;box-shadow:0 9px 24px rgba(0,0,0,.25)}.ai-chat-panel{width:min(350px,calc(100vw - 30px));margin-bottom:9px;overflow:hidden;background:#fff;color:#10233b;border:1px solid rgba(212,175,55,.45);border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.28)}.ai-chat-head{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;color:#fff;background:linear-gradient(135deg,#0b2948,#123c62)}.ai-chat-head button{border:0;background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}.ai-chat-messages{max-height:245px;min-height:92px;overflow:auto;padding:11px;background:#f7f9fb;font-size:.78rem}.ai-msg{max-width:88%;margin:5px 0;padding:8px 10px;border-radius:11px;line-height:1.55;white-space:pre-wrap}.ai-msg.bot{background:#e8eef5;margin-left:auto}.ai-msg.user{background:#ead18a;margin-right:auto}.ai-chat-quick{display:flex;gap:5px;flex-wrap:wrap;padding:7px 10px 2px;background:#fff}.ai-chat-quick button{border:1px solid #d9bf61;border-radius:999px;padding:4px 8px;background:#fffaf0;color:#765b0a;cursor:pointer;font:inherit;font-size:.68rem}.ai-chat-form{display:flex;gap:6px;padding:9px;background:#fff}.ai-chat-form input{min-width:0;flex:1;border:1px solid #dce3ea;border-radius:9px;padding:8px;font:inherit;font-size:.78rem}.ai-chat-form button{width:38px;border:0;border-radius:9px;color:#fff;background:#0b2948;cursor:pointer}@media(max-width:600px){.ai-chatbot{left:10px;bottom:74px}.hero-corner-logo{right:4px;font-size:.62rem}.hero-message{max-width:92%}}
 .contact-inquiry {
     margin-top: 22px;
     padding-top: 18px;
@@ -2549,8 +2551,8 @@
     <header class="fixed-header" id="fixedHeader">
         <div class="header-inner">
             <div class="logo" onclick="switchTab('home')">
-                <div class="logo-icon">
-                    <i class="fa-solid fa-building"></i>
+                <div class="logo-icon logo-image-wrap">
+                    <img src="Himmat-Almedina.png" class="brand-logo-image" alt="همة المدينة العقارية" loading="eager">
                 </div>
                 <div>
                     <span class="logo-text">همة<span class="gold">المدينة</span>العقارية</span>
@@ -2645,7 +2647,7 @@
         ========================================================== -->
         <div class="hero-section active" id="section-home">
             <div class="hero-content">
-                <div class="hero-corner-logo" aria-label="همة المدينة العقارية"><i class="fa-solid fa-building"></i><span>همة المدينة</span></div>
+                <div class="hero-corner-logo" aria-label="همة المدينة العقارية"><img src="Himmat-Almedina.png" class="hero-brand-image" alt="همة المدينة العقارية" loading="eager"></div>
                 <div class="hero-logo">
                     <i class="fa-solid fa-building"></i>
                 </div>
@@ -2706,14 +2708,14 @@
                             <div class="offer-discount">-10%</div>
                             <div class="offer-icon"><i class="fa-solid fa-mosque"></i></div>
                             <div class="offer-body">
-                                <div class="offer-title" data-i18n="offer1_title">شقة · العزيزية</div>
-                                <div class="offer-loc"><i class="fa-solid fa-location-dot"></i> <span data-i18n="offer1_loc">مكة المكرمة - العزيزية</span></div>
-                                <div class="offer-meta"><span data-i18n="offer1_meta">140 م² · 3 غرف</span></div>
+                                <div class="offer-title" data-i18n="offer1_title">شقة مع سطح خاص · الندى</div>
+                                <div class="offer-loc"><i class="fa-solid fa-location-dot"></i> <span data-i18n="offer1_loc">الرياض - الندى</span></div>
+                                <div class="offer-meta"><span data-i18n="offer1_meta">257 م² إجماليًا · 3 غرف نوم</span></div>
                                 <div class="offer-price">
-                                    <span class="old-price">750,000 <span data-i18n="sar">ر.س</span></span>
-                                    <span class="new-price">675,000 <span data-i18n="sar">ر.س</span></span>
+                                    <span class="old-price" data-i18n="offer_price_contact">السعر عند التواصل</span>
+                                    <span class="new-price" data-i18n="offer_price_contact">السعر عند التواصل</span>
                                 </div>
-                                <button class="btn btn-gold btn-sm" style="width:100%;" onclick="switchTab('contact')"><i class="fa-solid fa-arrow-up-left-from-square"></i> <span data-i18n="offer_details">عرض التفاصيل</span></button>
+                                <button class="btn btn-gold btn-sm" style="width:100%;" onclick="showOfferDetails('riyadh_nada')"><i class="fa-solid fa-arrow-up-left-from-square"></i> <span data-i18n="offer_details">عرض التفاصيل</span></button>
                             </div>
                         </div>
 
@@ -2774,6 +2776,25 @@
                         <div class="service-card" onclick="switchTab('contact')"><div class="service-icon"><i class="fa-solid fa-key"></i></div><div class="service-title" data-i18n="service_manage_title">إدارة الأملاك</div><div class="service-desc" data-i18n="service_manage_desc">نهتم بتفاصيل عقارك لتبقى مطمئنا على استثمارك.</div></div>
                         <div class="service-card" onclick="switchTab('contact')"><div class="service-icon"><i class="fa-solid fa-comments"></i></div><div class="service-title" data-i18n="service_consult_title">الاستشارات العقارية</div><div class="service-desc" data-i18n="service_consult_desc">قبل أن تقرر، نضع أمامك صورة أوضح للخيارات والفرص.</div></div>
                         <div class="service-card" onclick="switchTab('contact')"><div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div><div class="service-title" data-i18n="service_marketeting_title">التسويق العقاري</div><div class="service-desc" data-i18n="service_marketeting_desc">نبرز قيمة عقارك ونوصله إلى الباحث الجاد بأسلوب تسويقي احترافي</div></div>
+                    </div>
+                    <div class="tools-grid">
+                        <section class="tool-card map-tool">
+                            <div class="tool-heading"><i class="fa-solid fa-map-location-dot"></i><h3 data-i18n="map_tool_title">الخريطة العقارية</h3></div>
+                            <p data-i18n="map_tool_desc">استعرض موقع العرض الحالي على الخريطة التفاعلية.</p>
+                            <iframe title="الخريطة العقارية" loading="lazy" src="https://www.google.com/maps?q=24.8047853,46.6833618&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <a class="btn btn-outline btn-sm" href="https://maps.app.goo.gl/H8nTsdiuQSD58rgo9?g_st=ic" target="_blank" rel="noopener" data-i18n="map_open">فتح الخريطة كاملة</a>
+                        </section>
+                        <section class="tool-card finance-tool">
+                            <div class="tool-heading"><i class="fa-solid fa-calculator"></i><h3 data-i18n="finance_title">حاسبة التمويل العقاري</h3></div>
+                            <p data-i18n="finance_desc">احسب القسط الشهري التقريبي بناءً على قيمة العقار والدفعة والمدة.</p>
+                            <div class="finance-form">
+                                <label><span data-i18n="finance_property">قيمة العقار</span><input id="financeProperty" type="number" min="0" value="1000000"></label>
+                                <label><span data-i18n="finance_down">الدفعة المقدمة</span><input id="financeDown" type="number" min="0" value="200000"></label>
+                                <label><span data-i18n="finance_rate">النسبة السنوية %</span><input id="financeRate" type="number" min="0" step="0.01" value="5"></label>
+                                <label><span data-i18n="finance_years">المدة بالسنوات</span><input id="financeYears" type="number" min="1" max="40" value="20"></label>
+                            </div>
+                            <div class="finance-result"><span data-i18n="finance_monthly">القسط الشهري التقريبي</span><strong id="financeMonthly">—</strong><small data-i18n="finance_disclaimer">حساب إرشادي، وتختلف النتيجة حسب جهة التمويل والرسوم.</small></div>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -2959,6 +2980,18 @@
                                 <p data-i18n="faq6_a">عبر صفحة «تواصل» يمكنك مراسلتنا واتساب أو بريد إلكتروني أو الاتصال المباشر، وفريقنا يرد خلال وقت قصير.</p>
                             </div>
                         </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="faq7_q">هل العروض المعروضة مخزون كامل؟</span><i class="fa-solid fa-plus faq-icon"></i></button>
+                            <div class="faq-answer"><p data-i18n="faq7_a">العروض المعروضة نماذج قابلة للتحديث وليست بالضرورة مخزونًا كاملًا. اضغط «عرض التفاصيل» أو تواصل معنا للتأكد من حالة العقار وتوفره.</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="faq8_q">كيف يعمل المساعد الذكي؟</span><i class="fa-solid fa-plus faq-icon"></i></button>
+                            <div class="faq-answer"><p data-i18n="faq8_a">يقدم المساعد ردودًا إرشادية فورية عن التقييم والإضافة والمدن والخدمات، ويمكنه نقلك مباشرة إلى القسم المناسب.</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="faq9_q">هل يمكن إضافة مدينة أو حي جديد؟</span><i class="fa-solid fa-plus faq-icon"></i></button>
+                            <div class="faq-answer"><p data-i18n="faq9_a">نعم، من صفحة الإضافة يمكنك حفظ مدينة جديدة مع سعر متر تقريبي وإضافة أحيائها، وستظهر في قوائم التقييم والإضافة على جهازك.</p></div>
+                        </div>
                     </div>
                     <div class="empty-msg" id="faqEmpty" style="display:none;" data-i18n="faq_empty">لا توجد نتائج مطابقة</div>
                 </div>
@@ -3111,6 +3144,9 @@
                         <button class="btn btn-gold btn-sm" id="shareResultBtn">
                             <i class="fa-solid fa-share-alt"></i> <span data-i18n="share">مشاركة</span>
                         </button>
+                        <button class="btn btn-outline btn-sm" id="printValuationBtn" type="button" onclick="printValuationReport()">
+                            <i class="fa-solid fa-file-pdf"></i> <span data-i18n="print_report">تقرير PDF</span>
+                        </button>
                         <button class="btn btn-outline btn-sm" id="resetFormBtn">
                             <i class="fa-solid fa-undo"></i> <span data-i18n="reset">إعادة تعيين</span>
                         </button>
@@ -3238,14 +3274,16 @@
                         </div>
                     </div>
                     <div class="chart-box"><canvas id="analyticsChart"></canvas></div>
-                    <div class="section-title" style="font-size:0.7rem; margin-top:10px; color:var(--warning);">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i> <span data-i18n="review_title">قيم البحث — تحتاج مراجعة</span>
-                    </div>
-                    <p class="review-note" id="reviewMeta"></p>
-                    <div class="table-wrap">
-                        <table class="data-table"><thead><tr>
-                            <th data-i18n="review_param">المعامل</th><th data-i18n="review_value">القيمة</th><th data-i18n="review_status">الحالة</th>
-                        </tr></thead><tbody id="reviewTableBody"></tbody></table>
+                    <div id="adminReviewPanel" class="admin-only-review" hidden aria-hidden="true">
+                        <div class="section-title" style="font-size:0.7rem; margin-top:10px; color:var(--warning);">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> <span data-i18n="review_title">قيم البحث — تحتاج مراجعة</span>
+                        </div>
+                        <p class="review-note" id="reviewMeta"></p>
+                        <div class="table-wrap">
+                            <table class="data-table"><thead><tr>
+                                <th data-i18n="review_param">المعامل</th><th data-i18n="review_value">القيمة</th><th data-i18n="review_status">الحالة</th>
+                            </tr></thead><tbody id="reviewTableBody"></tbody></table>
+                        </div>
                     </div>
                     <div class="section-title" style="font-size:0.7rem; margin-top:10px;"><i class="fa-solid fa-list"></i> <span data-i18n="props_list">العقارات المسجّلة</span></div>
                     <div class="table-wrap">
@@ -3255,7 +3293,7 @@
                             <th data-i18n="date">التاريخ</th>
                         </tr></thead><tbody id="propsTableBody"></tbody></table>
                     </div>
-                    <div class="empty-msg" id="propsEmpty" data-i18n="props_empty">لا توجد عقارات مسجّلة بعد</div>
+                    <div class="empty-msg" id="propsEmpty"><i class="fa-solid fa-house-circle-plus"></i><br><span data-i18n="props_empty">أضف أول عقار لتبدأ قاعدة بياناتك وتظهر إحصاءاتك هنا</span><br><button type="button" class="btn btn-gold btn-sm" onclick="switchTab('add')" data-i18n="props_empty_cta">إضافة أول عقار</button></div>
                 </div>
             </div>
         </div>
@@ -3595,7 +3633,16 @@ CONTACT
             <i class="fa-solid fa-circle-check" id="modalIcon"></i>
             <h4 id="modalTitle">—</h4>
             <p id="modalMessage">—</p>
-            <button class="btn btn-gold" id="modalCloseBtn" data-i18n="modal_ok">حسناً</button>
+                            <button class="btn btn-gold" id="modalCloseBtn" data-i18n="modal_ok">حسناً</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay offer-detail-overlay" id="offerDetailsModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="offerDetailsTitle">
+        <div class="modal-box offer-detail-box">
+            <button class="offer-detail-close" type="button" onclick="closeOfferDetails()" aria-label="إغلاق">×</button>
+            <div class="offer-detail-heading"><i class="fa-solid fa-house-circle-check"></i><h2 id="offerDetailsTitle" data-i18n="offer_details_title">تفاصيل الوحدة</h2></div>
+            <div id="offerDetailsContent" class="offer-details-content"></div>
+            <div class="offer-detail-actions"><a id="offerMapLink" class="btn btn-gold" href="https://maps.app.goo.gl/H8nTsdiuQSD58rgo9?g_st=ic" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> <span data-i18n="offer_map">الموقع على الخريطة</span></a><button class="btn btn-outline" type="button" onclick="closeOfferDetails()" data-i18n="modal_ok">حسناً</button></div>
         </div>
     </div>
 
@@ -3715,7 +3762,7 @@ CONTACT
                 btn_add: "إدراج وتقييم",
                 btn_refresh: "تحديث",
                 reset: "إعادة تعيين",
-                share: "مشاركة",
+                share: "مشاركة", print_report: "تقرير PDF",
                 clear: "مسح",
                 show: "عرض",
                 social_title: "تابعنا عبر منصات التواصل",
@@ -3743,7 +3790,7 @@ CONTACT
                 review_due: "يحتاج مراجعة",
                 review_ok: "محدّث",
                 props_list: "العقارات المسجّلة",
-                props_empty: "لا توجد عقارات مسجّلة بعد",
+                props_empty: "أضف أول عقار لتبدأ قاعدة بياناتك وتظهر إحصاءاتك هنا", props_empty_cta: "إضافة أول عقار",
                 ai_estimate: "تقدير AI",
                 date: "التاريخ",
                 about_title: "همة المدينة",
@@ -3891,10 +3938,8 @@ CONTACT
 
                 offers_badge: "فرص لا تفوّت",
                 offers_title: "عروض وخصومات",
-                offers_sub: "أفضل العروض العقارية الحالية بخصومات حصرية عبر همة المدينة العقارية",
-                offer1_title: "شقة · العزيزية",
-                offer1_loc: "مكة المكرمة - العزيزية",
-                offer1_meta: "140 م² · 3 غرف",
+                offers_sub: "نماذج من العروض العقارية — اضغط على التفاصيل لمشاهدة المواصفات الكاملة", map_tool_title: "الخريطة العقارية", map_tool_desc: "استعرض موقع العرض الحالي على الخريطة التفاعلية.", map_open: "فتح الخريطة كاملة", finance_title: "حاسبة التمويل العقاري", finance_desc: "احسب القسط الشهري التقريبي بناءً على قيمة العقار والدفعة والمدة.", finance_property: "قيمة العقار", finance_down: "الدفعة المقدمة", finance_rate: "النسبة السنوية %", finance_years: "المدة بالسنوات", finance_monthly: "القسط الشهري التقريبي", finance_disclaimer: "حساب إرشادي، وتختلف النتيجة حسب جهة التمويل والرسوم.",
+                                offer1_title: "شقة مع سطح خاص · الندى", offer1_loc: "الرياض - الندى", offer1_meta: "257 م² إجماليًا · 3 غرف نوم", offer_price_contact: "السعر عند التواصل", offer_details_title: "تفاصيل الوحدة", offer_map: "الموقع على الخريطة",
                 offer2_title: "شقة · الشاطئ",
                 offer2_loc: "جدة - الشاطئ",
                 offer2_meta: "165 م² · 3 غرف",
@@ -3979,7 +4024,7 @@ CONTACT
                 faq5_q: "هل الأدوات مجانية؟",
                 faq5_a: "نعم، أداة التقييم الذكي ومولّد العقود متاحة مجاناً لعملاء همة المدينة العقارية.",
                 faq6_q: "كيف أتواصل مع فريق الدعم؟",
-                faq6_a: "عبر صفحة «تواصل» يمكنك مراسلتنا واتساب أو بريد إلكتروني أو الاتصال المباشر، وفريقنا يرد خلال وقت قصير.",
+                faq6_a: "عبر صفحة «تواصل» يمكنك مراسلتنا واتساب أو بريد إلكتروني أو الاتصال المباشر، وفريقنا يرد خلال وقت قصير.", faq7_q: "هل العروض المعروضة مخزون كامل؟", faq7_a: "العروض المعروضة نماذج قابلة للتحديث وليست بالضرورة مخزونًا كاملًا. اضغط «عرض التفاصيل» أو تواصل معنا للتأكد من حالة العقار وتوفره.", faq8_q: "كيف يعمل المساعد الذكي؟", faq8_a: "يقدم المساعد ردودًا إرشادية فورية عن التقييم والإضافة والمدن والخدمات، ويمكنه نقلك مباشرة إلى القسم المناسب.", faq9_q: "هل يمكن إضافة مدينة أو حي جديد؟", faq9_a: "نعم، من صفحة الإضافة يمكنك حفظ مدينة جديدة مع سعر متر تقريبي وإضافة أحيائها، وستظهر في قوائم التقييم والإضافة على جهازك.",
 
                 vision_heading: "رؤيتنا", vision_full: "أن نكون مرجعا عقاريا موثوقا في المدينة المنورة، نختصر على العميل طريق البحث والحيرة، ونضع أمامه المعلومة الواضحة والفرصة المناسبة، ليبني قراره على معرفة لا على توقعات.",
                 mission_heading: "رسالتنا", mission_full: "أن نجعل التعامل العقاري أوضح وأسهل وأكثر ثقة، من خلال فهم احتياج العميل، ودراسة الخيارات بعناية، وتقديم خدمات عقارية احترافية في التسويق وإدارة الأملاك وكتابة العقود.",
@@ -4048,7 +4093,7 @@ CONTACT
                 btn_add: "Submit & Evaluate",
                 btn_refresh: "Refresh",
                 reset: "Reset",
-                share: "Share",
+                share: "Share", print_report: "PDF Report",
                 clear: "Clear",
                 show: "Show",
                 social_title: "Follow us on social media",
@@ -4076,7 +4121,7 @@ CONTACT
                 review_due: "Needs review",
                 review_ok: "Up to date",
                 props_list: "Registered Properties",
-                props_empty: "No properties registered yet",
+                props_empty: "Add your first property to start your database and see your statistics here", props_empty_cta: "Add First Property",
                 ai_estimate: "AI Estimate",
                 date: "Date",
                 about_title: "Himmat Al Madinah",
@@ -4225,10 +4270,8 @@ CONTACT
 
                 offers_badge: "Don't miss out",
                 offers_title: "Offers & Discounts",
-                offers_sub: "The best current real estate deals with exclusive discounts from Himmat Al Madinah",
-                offer1_title: "Apartment · Al Aziziyah",
-                offer1_loc: "Makkah - Al Aziziyah",
-                offer1_meta: "140 m² · 3 rooms",
+                offers_sub: "Examples of property listings — open details to view full specifications", map_tool_title: "Property Map", map_tool_desc: "Explore the current listing location on the interactive map.", map_open: "Open Full Map", finance_title: "Mortgage Calculator", finance_desc: "Estimate the monthly payment based on property value, down payment and term.", finance_property: "Property value", finance_down: "Down payment", finance_rate: "Annual rate %", finance_years: "Term in years", finance_monthly: "Estimated monthly payment", finance_disclaimer: "Illustrative calculation; lender terms and fees may vary.",
+                                offer1_title: "Apartment with Private Roof · Al Nada", offer1_loc: "Riyadh - Al Nada", offer1_meta: "257 m² total · 3 bedrooms", offer_price_contact: "Price on contact", offer_details_title: "Unit Details", offer_map: "View on Map",
                 offer2_title: "Apartment · Al Shati",
                 offer2_loc: "Jeddah - Al Shati",
                 offer2_meta: "165 m² · 3 rooms",
@@ -4313,7 +4356,7 @@ CONTACT
                 faq5_q: "Are the tools free?",
                 faq5_a: "Yes, the smart valuation tool and contract generator are available for free to Himmat Al Madinah clients.",
                 faq6_q: "How do I contact the support team?",
-                faq6_a: "Through the 'Contact' page you can reach us via WhatsApp, email, or phone, and our team responds within a short time.",
+                faq6_a: "Through the 'Contact' page you can reach us via WhatsApp, email, or phone, and our team responds within a short time.", faq7_q: "Are the displayed listings the full inventory?", faq7_a: "The displayed listings are examples that can be updated and may not represent the full inventory. Open details or contact us to confirm availability.", faq8_q: "How does the AI assistant work?", faq8_a: "It provides instant guidance about valuation, adding properties, cities and services, and can take you directly to the relevant section.", faq9_q: "Can I add a new city or district?", faq9_a: "Yes. From the Add page you can save a new city with an approximate rate and add its districts; they will appear in valuation and add lists on your device.",
 
                 vision_heading: "Our Vision", vision_full: "To be a trusted real estate reference in Madinah, shortening the client's path through search and uncertainty by presenting clear information and suitable opportunities, so decisions are built on knowledge rather than expectations.",
                 mission_heading: "Our Mission", mission_full: "To make real estate dealings clearer, easier and more trustworthy by understanding client needs, carefully studying options, and providing professional marketing, property management and contract-writing services.",
@@ -4382,7 +4425,7 @@ CONTACT
                 btn_add: "Soumettre & Évaluer",
                 btn_refresh: "Actualiser",
                 reset: "Réinitialiser",
-                share: "Partager",
+                share: "Partager", print_report: "Rapport PDF",
                 clear: "Effacer",
                 show: "Afficher",
                 social_title: "Suivez-nous sur les réseaux sociaux",
@@ -4410,7 +4453,7 @@ CONTACT
                 review_due: "À réviser",
                 review_ok: "À jour",
                 props_list: "Biens enregistrés",
-                props_empty: "Aucun bien enregistré",
+                props_empty: "Ajoutez votre premier bien pour commencer votre base de données", props_empty_cta: "Ajouter le premier bien",
                 ai_estimate: "Estimation IA",
                 date: "Date",
                 about_title: "Himmat Al Madinah",
@@ -4559,10 +4602,8 @@ CONTACT
 
                 offers_badge: "À ne pas manquer",
                 offers_title: "Offres et Réductions",
-                offers_sub: "Les meilleures offres immobilières actuelles avec des réductions exclusives de Himmat Al Madinah",
-                offer1_title: "Appartement · Al Aziziyah",
-                offer1_loc: "La Mecque - Al Aziziyah",
-                offer1_meta: "140 m² · 3 pièces",
+                offers_sub: "Exemples d’annonces immobilières — ouvrez les détails pour voir les spécifications", map_tool_title: "Carte immobilière", map_tool_desc: "Consultez l’emplacement de l’annonce sur la carte interactive.", map_open: "Ouvrir la carte complète", finance_title: "Calculateur de financement", finance_desc: "Estimez la mensualité selon la valeur du bien, l’apport et la durée.", finance_property: "Valeur du bien", finance_down: "Apport", finance_rate: "Taux annuel %", finance_years: "Durée en années", finance_monthly: "Mensualité estimée", finance_disclaimer: "Calcul indicatif; les conditions et frais varient selon le financeur.",
+                                offer1_title: "Appartement avec toit privé · Al Nada", offer1_loc: "Riyad - Al Nada", offer1_meta: "257 m² au total · 3 chambres", offer_price_contact: "Prix sur demande", offer_details_title: "Détails du bien", offer_map: "Voir sur la carte",
                 offer2_title: "Appartement · Al Shati",
                 offer2_loc: "Djeddah - Al Shati",
                 offer2_meta: "165 m² · 3 pièces",
@@ -4647,7 +4688,7 @@ CONTACT
                 faq5_q: "Les outils sont-ils gratuits ?",
                 faq5_a: "Oui, l'outil d'évaluation intelligente et le générateur de contrats sont disponibles gratuitement pour les clients de Himmat Al Madinah.",
                 faq6_q: "Comment contacter l'équipe support ?",
-                faq6_a: "Via la page « Contact », vous pouvez nous joindre par WhatsApp, e-mail ou téléphone, et notre équipe répond rapidement.",
+                faq6_a: "Via la page « Contact », vous pouvez nous joindre par WhatsApp, e-mail ou téléphone, et notre équipe répond rapidement.", faq7_q: "Les annonces affichées représentent-elles tout le stock ?", faq7_a: "Les annonces affichées sont des exemples pouvant être mis à jour et ne représentent pas nécessairement tout le stock. Ouvrez les détails ou contactez-nous pour confirmer la disponibilité.", faq8_q: "Comment fonctionne l’assistant intelligent ?", faq8_a: "Il fournit des réponses rapides sur l’évaluation, l’ajout, les villes et les services, et peut vous diriger vers la section appropriée.", faq9_q: "Puis-je ajouter une nouvelle ville ou un quartier ?", faq9_a: "Oui. Depuis la page d’ajout, vous pouvez enregistrer une ville avec un tarif approximatif et ajouter ses quartiers; ils apparaîtront dans les listes sur votre appareil.",
 
                 vision_heading: "Notre Vision", vision_full: "Devenir une référence immobilière de confiance à Médine, en raccourcissant le chemin de recherche et d’hésitation grâce à des informations claires et des opportunités adaptées, pour décider en connaissance de cause.",
                 mission_heading: "Notre Mission", mission_full: "Rendre les transactions immobilières plus claires, simples et fiables en comprenant les besoins du client, en étudiant soigneusement les options et en proposant des services professionnels de marketing, de gestion et de rédaction de contrats.",
@@ -5489,6 +5530,51 @@ CONTACT
         }
 
         // ============================================================
+        // 11.6 FINANCE CALCULATOR
+        // ============================================================
+        function updateFinanceCalculator() {
+            const price = Number(document.getElementById('financeProperty')?.value || 0);
+            const down = Number(document.getElementById('financeDown')?.value || 0);
+            const annual = Number(document.getElementById('financeRate')?.value || 0);
+            const years = Number(document.getElementById('financeYears')?.value || 0);
+            const out = document.getElementById('financeMonthly');
+            if (!out) return;
+            const principal = Math.max(0, price - down);
+            const months = Math.max(1, years * 12);
+            const monthlyRate = Math.max(0, annual) / 100 / 12;
+            const payment = monthlyRate === 0 ? principal / months : principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+            out.textContent = Number.isFinite(payment) ? payment.toLocaleString('ar-SA', {maximumFractionDigits: 0}) + ' ر.س' : '—';
+        }
+
+        // ============================================================
+        // 11.7 PROPERTY OFFER DETAILS
+        // ============================================================
+        function showOfferDetails(offerId) {
+            if (offerId !== 'riyadh_nada') return;
+            const content = document.getElementById('offerDetailsContent');
+            content.innerHTML = `
+                <section class="offer-detail-section full"><h3>🛑 للبيع: شقة مع سطح خاص في مشروع سيل في حي الندى بالرياض</h3><p><strong>حالة الإعلان:</strong> متاحة للبيع</p></section>
+                <section class="offer-detail-section"><h3>المساحة والعمر</h3><ul><li>مساحة الشقة: 137م²</li><li>مساحة السطح: 120م²</li><li>المساحة الإجمالية: 257م²</li><li>العمر: سنة واحدة</li></ul></section>
+                <section class="offer-detail-section"><h3>معلومات الإعلان</h3><ul><li>رقم الوحدة: 7526170</li><li>سعر البيع: 1,480,000 ريال</li><li>الاستخدام: سكني</li><li>رقم الإعلان من الهيئة العامة للعقار: 55555555</li><li>رقم الرخصة من الهيئة العامة للعقار: 44444444</li></ul></section>
+                <section class="offer-detail-section"><h3>المواصفات</h3><ul><li>3 غرف نوم</li><li>3 دورات مياه</li><li>صالة ومطبخ</li><li>غرفة غسيل</li></ul></section>
+                <section class="offer-detail-section"><h3>السطح</h3><ul><li>مجلس</li><li>دورة مياه ومغاسل</li><li>غرفة خادمة بدورة مياه</li><li>فناء خارجي</li></ul></section>
+                <section class="offer-detail-section"><h3>مميزات الوحدة</h3><ul><li>مؤثثة بالكامل</li><li>تكييف راكب</li><li>مطبخ راكب</li><li>موقفان للسيارات في القبو</li></ul></section>
+                <section class="offer-detail-section full"><h3>مميزات الموقع</h3><p>بالقرب من جامعة الإمام محمد بن سعود، وطريق أبي بكر الصديق، وطريق الأمير محمد بن سلمان.</p></section>
+                <section class="offer-detail-section"><h3>المسوق الحصري</h3><p>الدريم العقارية</p><p>📱 للتواصل: <a href="tel:+966502666220">0502666220</a> · <a href="tel:+966547022228">0547022228</a></p></section>
+                <section class="offer-detail-section"><h3>التراخيص</h3><ul><li>رخصة عقارية: 1200027687</li><li>ترخيص إعلاني: 721021227</li></ul></section>
+                <section class="offer-detail-section full"><h3>الموقع على الخريطة</h3><p><a href="https://maps.app.goo.gl/H8nTsdiuQSD58rgo9?g_st=ic" target="_blank" rel="noopener">فتح موقع العقار في خرائط Google</a></p></section>`;
+            const modal = document.getElementById('offerDetailsModal');
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeOfferDetails() {
+            const modal = document.getElementById('offerDetailsModal');
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        // ============================================================
         // 12. TAB NAVIGATION
         // ============================================================
         function switchTab(tab) {
@@ -5595,6 +5681,15 @@ CONTACT
             if (!text) return;
             if (await copyToClipboard(text)) showToast('✅ ' + t('copied'));
             else showToast('⚠️ ' + (t('copy_failed') || 'Copy failed'), 3500);
+        }
+
+        function printValuationReport() {
+            const get = id => document.getElementById(id)?.value || '—';
+            const result = document.querySelector('.result-box .value')?.textContent || '—';
+            const w = window.open('', '_blank', 'width=900,height=700');
+            if (!w) return showToast('يرجى السماح بالنوافذ المنبثقة لإنشاء التقرير');
+            w.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>تقرير التقييم العقاري - همة المدينة</title><style>body{font-family:Tajawal,Arial,sans-serif;color:#132f4c;margin:0;background:#f5f7fa}.report{max-width:800px;margin:30px auto;background:#fff;padding:32px;border-radius:18px;box-shadow:0 8px 30px #0001}.brand{display:flex;align-items:center;gap:12px;border-bottom:2px solid #d4af37;padding-bottom:15px}.brand img{width:45px;height:65px;object-fit:contain}.brand h1{font-size:22px;margin:0}.brand p{color:#7d6a2d;margin:4px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.item{border:1px solid #e4e9ef;border-radius:10px;padding:12px}.label{font-size:12px;color:#6b7785}.value{font-size:16px;font-weight:800;margin-top:5px}.result{margin-top:20px;padding:18px;border:2px solid #d4af37;border-radius:12px;text-align:center}.result strong{font-size:24px;color:#a77d0d}.note{margin-top:22px;color:#6b7785;font-size:12px;line-height:1.8}@media print{body{background:#fff}.report{margin:0;box-shadow:none}}</style></head><body><main class="report"><div class="brand"><img src="Himmat-Almedina.png" alt="همة المدينة العقارية"><div><h1>همة المدينة العقارية</h1><p>تقرير تقييم عقاري استرشادي</p></div></div><div class="grid"><div class="item"><div class="label">المدينة</div><div class="value">${get('mainCity')}</div></div><div class="item"><div class="label">الحي</div><div class="value">${get('mainNeighborhood')}</div></div><div class="item"><div class="label">نوع العقار</div><div class="value">${get('mainPropertyType')}</div></div><div class="item"><div class="label">المساحة</div><div class="value">${get('mainArea')} م²</div></div><div class="item"><div class="label">الغرف</div><div class="value">${get('mainRooms')}</div></div><div class="item"><div class="label">العمر</div><div class="value">${get('mainAge')} سنة</div></div></div><div class="result"><div>نطاق القيمة التقديرية</div><strong>${result}</strong></div><p class="note">هذا التقرير تقدير استرشادي مبني على بيانات المدخلات ومؤشرات السوق، وليس وثيقة تثمين رسمية. تاريخ الإنشاء: ${new Date().toLocaleDateString('ar-SA')}</p></main><script>window.onload=()=>setTimeout(()=>window.print(),350)<\/script></body></html>`);
+            w.document.close();
         }
 
         function printContract() {
@@ -5733,10 +5828,14 @@ CONTACT
             document.getElementById('customModal').addEventListener('click', e => {
                 if (e.target.id === 'customModal') closeModal();
             });
+            document.getElementById('offerDetailsModal').addEventListener('click', e => {
+                if (e.target.id === 'offerDetailsModal') closeOfferDetails();
+            });
             document.addEventListener('keydown', e => {
                 if (e.key === 'Escape') {
                     modalAction = null;
                     closeModal();
+                    closeOfferDetails();
                 }
             });
 
@@ -5744,6 +5843,8 @@ CONTACT
                 el.addEventListener('input', scheduleRefresh);
                 el.addEventListener('change', scheduleRefresh);
             });
+            document.querySelectorAll('#financeProperty, #financeDown, #financeRate, #financeYears').forEach(el => el.addEventListener('input', updateFinanceCalculator));
+            updateFinanceCalculator();
 
             document.getElementById('contactForm').addEventListener('submit', openContactWhatsApp);
             const chatPanel=document.getElementById('aiChatPanel'); const chatToggle=document.getElementById('aiChatToggle');
