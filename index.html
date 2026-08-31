@@ -6,10 +6,12 @@
     <title>همة المدينة العقارية — Himmat Al Madinah Real Estate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
     <style>
         /* ============================================================
            ROOT
@@ -2468,8 +2470,74 @@
     color: var(--text-secondary);
     line-height: 1.7;
 }
+.purpose-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 20px}.purpose-card{padding:18px;border:1px solid rgba(201,168,76,.38);border-radius:16px;background:linear-gradient(145deg,#fffdf5,#f8fafc);box-shadow:0 8px 20px rgba(15,36,64,.06);transition:transform .18s ease,box-shadow .18s ease}.purpose-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(15,36,64,.12)}.purpose-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--gold-gradient);color:var(--primary);margin-bottom:10px}.purpose-card h3{color:var(--primary);font-size:1rem;margin-bottom:7px}.purpose-card p{color:var(--text-secondary);font-size:.8rem;line-height:1.9}.purpose-goal{background:linear-gradient(145deg,#f5f9ff,#fffdf5)}.service-card{min-height:178px}.service-desc{line-height:1.75}@media(max-width:760px){.purpose-grid{grid-template-columns:1fr}.purpose-card{padding:15px}}
 @media (max-width: 640px) {
     .offers-grid, .services-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+}
+/* ============================================================
+   ACCESSIBILITY & STATE POLISH
+   ============================================================ */
+:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+.social-circle-btn.is-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    filter: grayscale(0.25);
+}
+.social-circle-btn.is-disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+[aria-invalid="true"] {
+    border-color: var(--danger) !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.14) !important;
+}
+.custom-location-box {
+    margin-top: 18px;
+    padding: 14px;
+    border: 1px dashed var(--gold);
+    border-radius: var(--radius);
+    background: rgba(212, 175, 55, 0.06);
+    text-align: start;
+}
+.custom-location-box h3 { color: var(--primary); font-size: 0.95rem; margin: 0 0 4px; }
+.custom-location-box p { color: var(--muted); font-size: 0.74rem; margin: 0 0 10px; }
+.custom-location-box .btn { margin-top: 4px; }
+.hero-content{position:relative}.hero-corner-logo{position:absolute;top:0;right:0;display:inline-flex;align-items:center;gap:5px;color:var(--eval-text-gold);font-size:.7rem;font-weight:800}.hero-message{display:inline-block;margin:5px auto 10px;padding:8px 16px;color:#fff;background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(255,255,255,.08));border:1px solid rgba(212,175,55,.58);border-radius:999px;font-size:clamp(.92rem,2vw,1.18rem);font-weight:800;box-shadow:0 8px 26px rgba(0,0,0,.18)}.ai-chatbot{position:fixed;z-index:50;left:18px;bottom:18px;direction:rtl}.ai-chat-toggle{display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;padding:10px 14px;border-radius:999px;color:#071a2d;background:var(--gold);font:inherit;font-size:.78rem;font-weight:800;box-shadow:0 9px 24px rgba(0,0,0,.25)}.ai-chat-panel{width:min(350px,calc(100vw - 30px));margin-bottom:9px;overflow:hidden;background:#fff;color:#10233b;border:1px solid rgba(212,175,55,.45);border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.28)}.ai-chat-head{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;color:#fff;background:linear-gradient(135deg,#0b2948,#123c62)}.ai-chat-head button{border:0;background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}.ai-chat-messages{max-height:245px;min-height:92px;overflow:auto;padding:11px;background:#f7f9fb;font-size:.78rem}.ai-msg{max-width:88%;margin:5px 0;padding:8px 10px;border-radius:11px;line-height:1.55;white-space:pre-wrap}.ai-msg.bot{background:#e8eef5;margin-left:auto}.ai-msg.user{background:#ead18a;margin-right:auto}.ai-chat-quick{display:flex;gap:5px;flex-wrap:wrap;padding:7px 10px 2px;background:#fff}.ai-chat-quick button{border:1px solid #d9bf61;border-radius:999px;padding:4px 8px;background:#fffaf0;color:#765b0a;cursor:pointer;font:inherit;font-size:.68rem}.ai-chat-form{display:flex;gap:6px;padding:9px;background:#fff}.ai-chat-form input{min-width:0;flex:1;border:1px solid #dce3ea;border-radius:9px;padding:8px;font:inherit;font-size:.78rem}.ai-chat-form button{width:38px;border:0;border-radius:9px;color:#fff;background:#0b2948;cursor:pointer}@media(max-width:600px){.ai-chatbot{left:10px;bottom:74px}.hero-corner-logo{right:4px;font-size:.62rem}.hero-message{max-width:92%}}
+.contact-inquiry {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    text-align: start;
+}
+.contact-inquiry h3 {
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+.contact-inquiry .inquiry-sub {
+    color: var(--muted);
+    font-size: 0.76rem;
+    margin-bottom: 12px;
+}
+.contact-inquiry textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.contact-inquiry .inquiry-submit {
+    width: 100%;
+    margin-top: 4px;
+}
+@media (max-width: 768px) {
+    .bottom-nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+        scrollbar-width: none;
+    }
+    .bottom-nav::-webkit-scrollbar { display: none; }
+    .bottom-nav .nav-item { min-width: 70px; }
 }
 </style>
 </head>
@@ -2511,6 +2579,10 @@
                     <i class="fa-solid fa-plus-circle"></i>
                     <span class="nav-label" data-i18n="nav_add">إضافة</span>
                 </button>
+                <button class="nav-link" data-tab="database">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="nav-label" data-i18n="nav_database">التحليلات</span>
+                </button>
                 <button class="nav-link" data-tab="services">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                     <span class="nav-label" data-i18n="nav_services">الخدمات</span>
@@ -2521,7 +2593,7 @@
                 </button>
                 <button class="nav-link" data-tab="about">
                     <i class="fa-solid fa-circle-info"></i>
-                    <span class="nav-label" data-i18n="nav_about">عن المكتب</span>
+                    <span class="nav-label" data-i18n="nav_about">عنّا</span>
                 </button>
                 <button class="nav-link" data-tab="contact">
                     <i class="fa-solid fa-address-card"></i>
@@ -2553,6 +2625,16 @@
     ============================================================ -->
     <div class="toast" id="toast"></div>
 
+    <section class="ai-chatbot" id="aiChatbot" aria-label="مساعد همة الذكي">
+        <button class="ai-chat-toggle" id="aiChatToggle" type="button" aria-expanded="false" aria-controls="aiChatPanel"><i class="fa-solid fa-robot"></i><span data-i18n="chatbot_button">المساعد الذكي</span></button>
+        <div class="ai-chat-panel" id="aiChatPanel" hidden>
+            <div class="ai-chat-head"><strong data-i18n="chatbot_title">مساعد همة الذكي</strong><button type="button" id="aiChatClose" aria-label="إغلاق">×</button></div>
+            <div class="ai-chat-messages" id="aiChatMessages" aria-live="polite"></div>
+            <div class="ai-chat-quick"><button type="button" data-chat-prompt="التقييم" data-i18n="chat_quick_eval">التقييم</button><button type="button" data-chat-prompt="الإضافة" data-i18n="chat_quick_add">إضافة عقار</button><button type="button" data-chat-prompt="التواصل" data-i18n="chat_quick_contact">التواصل</button></div>
+            <form id="aiChatForm" class="ai-chat-form"><input id="aiChatInput" type="text" autocomplete="off" data-i18n-placeholder="chatbot_placeholder" placeholder="اكتب سؤالك..."><button type="submit" aria-label="إرسال"><i class="fa-solid fa-paper-plane"></i></button></form>
+        </div>
+    </section>
+
     <!-- ============================================================
     MAIN CONTENT
     ============================================================ -->
@@ -2563,6 +2645,7 @@
         ========================================================== -->
         <div class="hero-section active" id="section-home">
             <div class="hero-content">
+                <div class="hero-corner-logo" aria-label="همة المدينة العقارية"><i class="fa-solid fa-building"></i><span>همة المدينة</span></div>
                 <div class="hero-logo">
                     <i class="fa-solid fa-building"></i>
                 </div>
@@ -2570,6 +2653,7 @@
                     همة<span class="gold">المدينة</span>العقارية
                 </h1>
                 <p class="hero-subtitle" data-i18n="hero_subtitle">🏛️ Himmat Al Madinah Real Estate</p>
+                <p class="hero-message" data-i18n="hero_message">قرارك العقاري يبدأ من معرفة القيمة العادلة</p>
                 <p class="hero-desc" data-i18n="hero_desc">
                     منصتك الذكية لتقدير القيم السوقية للعقارات في المملكة<br>
                     بدقة وسرعة باستخدام أحدث خوارزميات الذكاء الاصطناعي
@@ -2684,36 +2768,12 @@
                     </div>
 
                     <div class="services-grid">
-                        <div class="service-card" onclick="switchTab('contracts')">
-                            <div class="service-icon"><i class="fa-solid fa-file-signature"></i></div>
-                            <div class="service-title" data-i18n="service1_title">صياغة العقود</div>
-                            <div class="service-desc" data-i18n="service1_desc">أنشئ عقدك</div>
-                        </div>
-                        <div class="service-card" onclick="switchTab('evaluate')">
-                            <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                            <div class="service-title" data-i18n="service2_title">التقييم الذكي</div>
-                            <div class="service-desc" data-i18n="service2_desc">قيّم عقارك</div>
-                        </div>
-                        <div class="service-card" onclick="switchTab('offers')">
-                            <div class="service-icon"><i class="fa-solid fa-house"></i></div>
-                            <div class="service-title" data-i18n="service3_title">بيع وشراء العقارات</div>
-                            <div class="service-desc" data-i18n="service3_desc">تصفح العروض</div>
-                        </div>
-                        <div class="service-card" onclick="switchTab('contact')">
-                            <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                            <div class="service-title" data-i18n="service4_title">تسويق عقاري</div>
-                            <div class="service-desc" data-i18n="service4_desc">سوّق عقارك</div>
-                        </div>
-                        <div class="service-card" onclick="switchTab('contact')">
-                            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
-                            <div class="service-title" data-i18n="service5_title">استشارات عقارية</div>
-                            <div class="service-desc" data-i18n="service5_desc">احصل على استشارة</div>
-                        </div>
-                        <div class="service-card" onclick="switchTab('contact')">
-                            <div class="service-icon"><i class="fa-solid fa-key"></i></div>
-                            <div class="service-title" data-i18n="service6_title">إدارة الأملاك</div>
-                            <div class="service-desc" data-i18n="service6_desc">تواصل معنا</div>
-                        </div>
+                        <div class="service-card" onclick="switchTab('offers')"><div class="service-icon"><i class="fa-solid fa-house-circle-check"></i></div><div class="service-title" data-i18n="service_buy_title">بيع وشراء العقارات</div><div class="service-desc" data-i18n="service_buy_desc">نساعدك على البيع والشراء بثقة، من دراسة الاحتياج حتى إتمام الصفقة.</div></div>
+                        <div class="service-card" onclick="switchTab('database')"><div class="service-icon"><i class="fa-solid fa-chart-line"></i></div><div class="service-title" data-i18n="service_market_title">دراسة وتحليل السوق</div><div class="service-desc" data-i18n="service_market_desc">نحلل معطيات السوق ونقارن الفرص لتتخذ قرارك على معرفة.</div></div>
+                        <div class="service-card" onclick="switchTab('contracts')"><div class="service-icon"><i class="fa-solid fa-file-signature"></i></div><div class="service-title" data-i18n="service_contract_title">كتابة عقود الإيجار</div><div class="service-desc" data-i18n="service_contract_desc">عقد يضمن حق الطرفين المؤجر والمستأجر ويقلل مساحة الخلاف.</div></div>
+                        <div class="service-card" onclick="switchTab('contact')"><div class="service-icon"><i class="fa-solid fa-key"></i></div><div class="service-title" data-i18n="service_manage_title">إدارة الأملاك</div><div class="service-desc" data-i18n="service_manage_desc">نهتم بتفاصيل عقارك لتبقى مطمئنا على استثمارك.</div></div>
+                        <div class="service-card" onclick="switchTab('contact')"><div class="service-icon"><i class="fa-solid fa-comments"></i></div><div class="service-title" data-i18n="service_consult_title">الاستشارات العقارية</div><div class="service-desc" data-i18n="service_consult_desc">قبل أن تقرر، نضع أمامك صورة أوضح للخيارات والفرص.</div></div>
+                        <div class="service-card" onclick="switchTab('contact')"><div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div><div class="service-title" data-i18n="service_marketeting_title">التسويق العقاري</div><div class="service-desc" data-i18n="service_marketeting_desc">نبرز قيمة عقارك ونوصله إلى الباحث الجاد بأسلوب تسويقي احترافي</div></div>
                     </div>
                 </div>
             </div>
@@ -2773,7 +2833,7 @@
                                 <select id="cUnitType">
                                     <option value="apartment" data-i18n="unit_apartment">شقة</option>
                                     <option value="villa" data-i18n="unit_villa">فيلا</option>
-                                    <option value="office" data-i18n="unit_office">مكتب</option>
+                                    <option value="business_unit" data-i18n="unit_business">وحدة تجارية</option>
                                     <option value="shop" data-i18n="unit_shop">محل تجاري</option>
                                     <option value="land" data-i18n="unit_land">أرض</option>
                                 </select>
@@ -2934,15 +2994,27 @@
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-map-pin"></i> <span data-i18n="district">الحي</span></label>
-                                <input type="text" id="mainNeighborhood" class="live-input" value="النخيل">
+                                <select id="mainNeighborhood" class="live-input" aria-label="الحي"></select>
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-building"></i> <span data-i18n="type">نوع العقار</span></label>
                                 <select id="mainPropertyType" class="live-input">
+                                    <option value="الكل">الكل</option>
                                     <option value="فيلا">فيلا</option>
-                                    <option value="شقة سكنية" selected>شقة سكنية</option>
+                                    <option value="شقة في برج">شقة في برج</option>
+                                    <option value="شقة في عمارة" selected>شقة في عمارة</option>
                                     <option value="أرض">أرض</option>
-                                    <option value="دوبلكس">دوبلكس</option>
+                                    <option value="دبلكس">دبلكس</option>
+                                    <option value="قصر">قصر</option>
+                                    <option value="مزرعة">مزرعة</option>
+                                    <option value="استراحة">استراحة</option>
+                                    <option value="مكتب">مكتب</option>
+                                    <option value="مخزن">مخزن</option>
+                                    <option value="منتجع">منتجع</option>
+                                    <option value="معرض">معرض</option>
+                                    <option value="عمارة">عمارة</option>
+                                    <option value="محطة">محطة</option>
+                                    <option value="دور">دور</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -2951,11 +3023,11 @@
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-bed"></i> <span data-i18n="rooms">عدد الغرف</span></label>
-                                <input type="number" id="mainRooms" class="live-input" min="0" value="4">
+                                <input type="number" id="mainRooms" class="live-input" min="0" max="20" step="1" value="4">
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-hourglass-half"></i> <span data-i18n="age">عمر العقار (سنوات)</span></label>
-                                <input type="number" id="mainAge" class="live-input" min="0" value="2">
+                                <input type="number" id="mainAge" class="live-input" min="0" max="100" step="1" value="2">
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-compass"></i> <span data-i18n="facade">الواجهة</span></label>
@@ -2968,7 +3040,7 @@
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-road"></i> <span data-i18n="street_width">عرض الشارع (م)</span></label>
-                                <input type="number" id="mainStreetWidth" class="live-input" min="5" value="20">
+                                <input type="number" id="mainStreetWidth" class="live-input" min="3" max="100" step="0.5" value="20">
                             </div>
                             <div class="form-group">
                                 <label><i class="fa-solid fa-map-location-dot"></i> <span data-i18n="location_type">تصنيف الحي</span></label>
@@ -3094,15 +3166,27 @@
         </div>
         <div class="form-group">
             <label data-i18n="district">الحي</label>
-            <input type="text" id="addLocation" required placeholder="اسم الحي">
+            <select id="addLocation" required aria-label="الحي"></select>
         </div>
         <div class="form-group">
             <label data-i18n="type">نوع العقار</label>
             <select id="addPropertyType">
-                <option value="شقة سكنية">شقة سكنية</option>
+                <option value="الكل">الكل</option>
                 <option value="فيلا">فيلا</option>
+                <option value="شقة في برج">شقة في برج</option>
+                <option value="شقة في عمارة">شقة في عمارة</option>
                 <option value="أرض">أرض</option>
-                <option value="دوبلكس">دوبلكس</option>
+                <option value="دبلكس">دبلكس</option>
+                <option value="قصر">قصر</option>
+                <option value="مزرعة">مزرعة</option>
+                <option value="استراحة">استراحة</option>
+                <option value="مكتب">مكتب</option>
+                <option value="مخزن">مخزن</option>
+                <option value="منتجع">منتجع</option>
+                <option value="معرض">معرض</option>
+                <option value="عمارة">عمارة</option>
+                <option value="محطة">محطة</option>
+                <option value="دور">دور</option>
             </select>
         </div>
         <div class="form-group">
@@ -3118,6 +3202,17 @@
         <i class="fa-solid fa-plus"></i> <span data-i18n="btn_add">إدراج وتقييم</span>
     </button>
 </form>
+
+                        <div class="custom-location-box" aria-labelledby="customLocationTitle">
+                            <h3 id="customLocationTitle" data-i18n="custom_location_title">إضافة مدينة أو حي جديد</h3>
+                            <p data-i18n="custom_location_hint">يمكنك حفظ مدينة جديدة مع سعر متر تقريبي، ثم إضافة أحيائها.</p>
+                            <div class="form-grid">
+                                <div class="form-group"><label for="customCityName" data-i18n="custom_city_name">اسم المدينة</label><input id="customCityName" type="text"></div>
+                                <div class="form-group"><label for="customCityRate" data-i18n="custom_city_rate">سعر المتر التقريبي</label><input id="customCityRate" type="number" min="100" step="50"></div>
+                                <div class="form-group"><label for="customNeighborhoodName" data-i18n="custom_neighborhood_name">اسم الحي</label><input id="customNeighborhoodName" type="text"></div>
+                            </div>
+                            <button type="button" class="btn btn-outline btn-sm" id="saveCustomLocationBtn"><i class="fa-solid fa-plus"></i> <span data-i18n="save_custom_location">حفظ المدينة والحي</span></button>
+                        </div>
 
                         <div id="excelStatus" style="margin-top:6px; display:none; padding:6px; border-radius:var(--radius); background:var(--success-light); border:1px solid var(--success);">
                             <i class="fa-solid fa-check-circle" style="color:var(--success);"></i>
@@ -3177,7 +3272,7 @@
                                 <i class="fa-solid fa-building"></i>
                             </div>
                             <div>
-                                <div class="about-title"><span data-i18n="about_title">مكتب همة المدينة</span> <span class="gold" data-i18n="about_title_gold">العقارية</span></div>
+                                <div class="about-title"><span data-i18n="about_title">همة المدينة</span> <span class="gold" data-i18n="about_title_gold">العقارية</span></div>
                                 <div class="about-subtitle" data-i18n="about_subtitle">🕌 شريكك العقاري الموثوق في المدينة المنورة</div>
                             </div>
                         </div>
@@ -3188,7 +3283,7 @@
                         </div>
 
                         <div class="about-description" data-i18n="about_text">
-                            <strong>مكتب همة المدينة العقارية</strong> شريكك العقاري الموثوق بالمدينة المنورة،
+                            <strong>همة المدينة العقارية</strong> شريكك العقاري الموثوق بالمدينة المنورة،
                             نقدم حلولاً متكاملة في <strong>التقييم العقاري الذكي</strong>، إدارة الأملاك، والتسويق العقاري
                             وفق أعلى معايير <strong>الجودة والحوكمة</strong>.
                         </div>
@@ -3204,6 +3299,24 @@
                                 <div class="mv-title" data-i18n="mv_vision_title">رؤيتنا</div>
                                 <div class="mv-desc" data-i18n="mv_vision_desc">أن نكون المرجع العقاري الرقمي الموثوق في المدينة المنورة، ونقدم أدوات ذكية تساعد الأفراد والمستثمرين على اتخاذ قرارات مبنية على البيانات.</div>
                             </div>
+                        </div>
+
+                        <div class="purpose-grid">
+                            <article class="purpose-card">
+                                <div class="purpose-icon"><i class="fa-solid fa-eye"></i></div>
+                                <h3 data-i18n="vision_heading">رؤيتنا</h3>
+                                <p data-i18n="vision_full">أن نكون مرجعا عقاريا موثوقا في المدينة المنورة، نختصر على العميل طريق البحث والحيرة، ونضع أمامه المعلومة الواضحة والفرصة المناسبة، ليبني قراره على معرفة لا على توقعات.</p>
+                            </article>
+                            <article class="purpose-card">
+                                <div class="purpose-icon"><i class="fa-solid fa-bullseye"></i></div>
+                                <h3 data-i18n="mission_heading">رسالتنا</h3>
+                                <p data-i18n="mission_full">أن نجعل التعامل العقاري أوضح وأسهل وأكثر ثقة، من خلال فهم احتياج العميل، ودراسة الخيارات بعناية، وتقديم خدمات عقارية احترافية في التسويق وإدارة الأملاك وكتابة العقود.</p>
+                            </article>
+                            <article class="purpose-card purpose-goal">
+                                <div class="purpose-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <h3 data-i18n="goal_heading">هدفنا</h3>
+                                <p data-i18n="goal_full">هدفنا ليس إتمام صفقة فحسب، بل بناء علاقة تبدأ بالثقة وتستمر بجودة الخدمة.</p>
+                            </article>
                         </div>
 
                         <div class="section-title" style="margin-bottom:6px;">
@@ -3301,28 +3414,58 @@ CONTACT
 
                 <!-- أزرار التواصل المباشر والتواصل الاجتماعي منظمّة بشكل احترافي -->
                 <div class="contact-social-section">
-    <h3 class="social-title">تابعنا عبر منصات التواصل</h3>
+    <h3 class="social-title" data-i18n="social_title">تابعنا عبر منصات التواصل</h3>
     <div class="contact-buttons-icon-only">
         <a href="https://wa.me/966530500906" target="_blank" rel="noopener" class="social-circle-btn whatsapp" title="واتساب">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="https://www.tiktok.com/@your_username" target="_blank" rel="noopener" class="social-circle-btn tiktok" title="تيك توك">
+        <a href="#" class="social-circle-btn tiktok is-disabled" aria-disabled="true" data-coming-soon="true" title="تيك توك">
             <i class="fa-brands fa-tiktok"></i>
         </a>
-        <a href="https://www.instagram.com/your_username" target="_blank" rel="noopener" class="social-circle-btn instagram" title="إنستغرام">
+        <a href="#" class="social-circle-btn instagram is-disabled" aria-disabled="true" data-coming-soon="true" title="إنستغرام">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://www.facebook.com/your_username" target="_blank" rel="noopener" class="social-circle-btn facebook" title="فيسبوك">
+        <a href="#" class="social-circle-btn facebook is-disabled" aria-disabled="true" data-coming-soon="true" title="فيسبوك">
             <i class="fa-brands fa-facebook-f"></i>
         </a>
-        <a href="https://x.com/your_username" target="_blank" rel="noopener" class="social-circle-btn x-twitter" title="منصة X">
+        <a href="#" class="social-circle-btn x-twitter is-disabled" aria-disabled="true" data-coming-soon="true" title="منصة X">
             <i class="fa-brands fa-x-twitter"></i>
         </a>
-        <a href="https://www.snapchat.com/add/your_username" target="_blank" rel="noopener" class="social-circle-btn snapchat" title="سناب شات">
+        <a href="#" class="social-circle-btn snapchat is-disabled" aria-disabled="true" data-coming-soon="true" title="سناب شات">
             <i class="fa-brands fa-snapchat"></i>
         </a>
     </div>
 </div>
+
+                <section class="contact-inquiry" aria-labelledby="contactInquiryTitle">
+                    <h3 id="contactInquiryTitle" data-i18n="contact_inquiry_title">أرسل استفسارك مباشرة</h3>
+                    <p class="inquiry-sub" data-i18n="contact_inquiry_sub">اكتب رسالتك وسنفتح لك محادثة واتساب جاهزة للإرسال.</p>
+                    <form id="contactForm" class="large-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contactName" data-i18n="contact_name">الاسم</label>
+                                <input id="contactName" type="text" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject" data-i18n="contact_subject">نوع الاستفسار</label>
+                                <select id="contactSubject">
+                                    <option value="buy" data-i18n="subject_buy">شراء عقار</option>
+                                    <option value="sell" data-i18n="subject_sell">بيع عقار</option>
+                                    <option value="valuation" data-i18n="subject_valuation">تقييم عقاري</option>
+                                    <option value="contract" data-i18n="subject_contract">صياغة عقد</option>
+                                    <option value="other" data-i18n="subject_other">استفسار عام</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" data-i18n="contact_message">الرسالة</label>
+                            <textarea id="contactMessage" required data-i18n-placeholder="contact_message_ph" placeholder="اكتب استفسارك هنا..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold inquiry-submit">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="contact_send_whatsapp">إرسال عبر واتساب</span>
+                        </button>
+                    </form>
+                </section>
 
             </div>
         </div>
@@ -3437,16 +3580,17 @@ CONTACT
         <button class="nav-item" data-tab="offers"><i class="fa-solid fa-tags"></i><span data-i18n="nav_offers">العروض</span></button>
         <button class="nav-item" data-tab="contracts"><i class="fa-solid fa-file-signature"></i><span data-i18n="nav_contracts">العقود</span></button>
         <button class="nav-item" data-tab="add"><i class="fa-solid fa-plus-circle"></i><span data-i18n="nav_add">إضافة</span></button>
+        <button class="nav-item" data-tab="database"><i class="fa-solid fa-chart-line"></i><span data-i18n="nav_database">التحليلات</span></button>
         <button class="nav-item" data-tab="services"><i class="fa-solid fa-screwdriver-wrench"></i><span data-i18n="nav_services">الخدمات</span></button>
         <button class="nav-item" data-tab="faq"><i class="fa-solid fa-circle-question"></i><span data-i18n="nav_faq">الأسئلة</span></button>
-        <button class="nav-item" data-tab="about"><i class="fa-solid fa-circle-info"></i><span data-i18n="nav_about">عن المكتب</span></button>
+        <button class="nav-item" data-tab="about"><i class="fa-solid fa-circle-info"></i><span data-i18n="nav_about">عنّا</span></button>
         <button class="nav-item" data-tab="contact"><i class="fa-solid fa-address-card"></i><span data-i18n="nav_contact">تواصل</span></button>
     </nav>
 </div>
     <!-- ============================================================
     MODAL
     ============================================================ -->
-    <div class="modal-overlay" id="customModal">
+    <div class="modal-overlay" id="customModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
         <div class="modal-box">
             <i class="fa-solid fa-circle-check" id="modalIcon"></i>
             <h4 id="modalTitle">—</h4>
@@ -3469,7 +3613,8 @@ CONTACT
             city_base_rates: { riyadh: 4800, jeddah: 4500, dammam: 3900, makkah: 5200, madinah: 4100 },
             city_aliases: { "الرياض": "riyadh", "جدة": "jeddah", "الدمام": "dammam", "مكة المكرمة": "makkah",
                 "المدينة المنورة": "madinah" },
-            property_type_multipliers: { "فيلا": 1.30, "شقة سكنية": 1.00, "أرض": 0.85, "دوبلكس": 1.15 },
+            neighborhoods_by_city: {"المدينة المنورة":["العزيزية","العاقول","العريض","الخالدية","الزهرة","شظاة","الملك فهد","المبعوث","الروابي","الربوة","الإسكان","الدويمة","قربان","العوالي","الهجرة","العصبة","قباء","القصواء","الرانوناء","شوران","مهزور","مذينب","بني حارثة","بني معاوية","بني ظفر","بني خدرة","بني بياضة","السيح","الفتح","القبلتين","الجامعة","أبو كبير","الجرف","البركة","السلام","الدفاع","طيبة","أحد","سيد الشهداء","المصانع","العيون","النصر","الراية","المناخة","المغيسلة","الوبرة","السكب","الخاتم","أبو بريقاء","وادي البطان","الحرة الشرقية"],"مكة المكرمة":["العوالي","الشوقية","الشرائع","النسيم","الزاهر","العتيبية","العمرة","النوارية","التنعيم","الراشدية","بطحاء قريش","الكعكية","ولي العهد","الحمراء وأم الجود","الزهراء","الضيافة","النزهة","الرصيفة","المسفلة","الهجرة","كدي","جرهم","الروابي","الخالدية","الهنداوية","المنصور","الشبيكة","الشامية","جرول","ريع ذاخر","الحجون","المعابدة","العزيزية الشمالية","الملاوي","العدل","العسيلة","وادي جليل","العمرة الجديدة","البحيرات","الشرائع الشمالية","الشرائع الجنوبية","الصفوة","الملك فهد","الحسينية","العكيشية","الليث الجديد"],"جدة":["الروضة","الزهراء","السلامة","النهضة","الشاطئ","المحمدية","الخالدية","النعيم","النزهة","البوادي","الربوة","الصفا","الفيصلية","الرحاب","مشرفة","العزيزية","الورود","بني مالك","النسيم","الواحة","السامر","المنار","الأجواد","الريان","مريخ","بريمان","المنطقة الصناعية","الجامعة","الفيحاء","السليمانية","الثغر","الروابي","الوزيرية","غليل","مدائن الفهد","البلد","الهنداوية","البغدادية الشرقية","البغدادية الغربية","الكندرة","الصحيفة","السبيل","النزلة الشرقية","النزلة اليمانية","الثعالبة","المحجر","الكرنتينا","الأمير فواز الشمالي","الأمير فواز الجنوبي","السنابل","الهدى","الأجاويد","الفضيلة","الخمرة","القرينية","الحمدانية","الصالحية","الفلاح","الرحمانية","طيبة","الرياض","الكوثر","الياقوت","الزمرد","اللؤلؤ","الأمواج","الشراع","الفردوس","الأصالة","البساتين","أبحر الجنوبية","أبحر الشمالية","المرجان","الشفا","المنتزهات","أم السلم","الحرازات"],"الرياض":["العليا","السليمانية","الملز","الوزارات","الضباط","الورود","الرحمانية","المحمدية","الرائد","النخيل","أم الحمام الشرقي","أم الحمام الغربي","المعذر","المعذر الشمالي","الهدا","الشفا","بدر","المروة","عكاظ","الحزم","ديراب","نمار","ظهرة نمار","العريجاء","العريجاء الغربية","العريجاء الوسطى","ظهرة البديعة","البديعة","السويدي","السويدي الغربي","شبرا","سلطانة","الجرادية","منفوحة","منفوحة الجديدة","الديرة","الشميسي","الفاخرية","العود","المرقب","الصالحية","الخالدية","غبيراء","اليمامة","الربوة","الريان","الروابي","النسيم الشرقي","النسيم الغربي","السلام","المنار","النهضة","الخليج","القدس","الحمراء","غرناطة","الشهداء","قرطبة","اليرموك","المونسية","الرمال","الجنادرية","القادسية","اشبيلية","الملك فيصل","الروضة","الملقا","حطين","العقيق","الصحافة","الياسمين","النرجس","العارض","القيروان","الربيع","الغدير","النفل","الوادي","التعاون","الازدهار","المصيف","المرسلات","الفلاح","الندى","الواحة","صلاح الدين","الملك فهد","الملك عبدالله","الملك عبدالعزيز","المغرزات","النور","السلي","الجزيرة","الفيحاء","المنصورة","العزيزية","الدار البيضاء","طيبة","المصفاة"],"الدمام":[]},
+            property_type_multipliers: { "الكل": 1.00, "فيلا": 1.30, "شقة في برج": 1.12, "شقة في عمارة": 1.00, "أرض": 0.85, "دبلكس": 1.15, "قصر": 1.55, "مزرعة": 0.95, "استراحة": 0.90, "مكتب": 1.05, "مخزن": 0.75, "منتجع": 1.35, "معرض": 1.10, "عمارة": 1.25, "محطة": 1.18, "دور": 1.05 },
             facade_adjustments: { "شرقية": 1.05, "شمالية": 1.04, "جنوبية": 1.00, "غربية": 0.98 },
             district_grade_adjustments: { "حي راقي": 1.25, "حي استثماري": 1.15, "حي متوسط": 1.00 },
             amenity_adjustments: { elevator: 1.04, pool: 1.08, driver_room: 1.03, furnished: 1.10, central_ac: 1.05,
@@ -3507,6 +3652,7 @@ CONTACT
         let lastCalculation = null;
         let isUpdating = false;
         let importedProperties = [];
+        let modalAction = null;
 
         // ============================================================
         // 3. TRANSLATIONS
@@ -3517,12 +3663,17 @@ CONTACT
                 nav_home: "الرئيسية",
                 nav_eval: "التقييم",
                 nav_add: "إضافة",
+                nav_database: "التحليلات",
                 nav_contracts: "العقود",
                 nav_about: "عنا",
                 nav_offers: "العروض",
                 nav_faq: "الاسئلة الشائعة",
                 nav_contact: "تواصل",
                 hero_subtitle: "🏛️ همة المدينة العقارية",
+                hero_message: "قرارك العقاري يبدأ من معرفة القيمة العادلة",
+                chatbot_button: "المساعد الذكي", chatbot_title: "مساعد همة الذكي", chatbot_placeholder: "اكتب سؤالك...", chatbot_welcome: "مرحباً، كيف أساعدك؟",
+                chat_quick_eval: "التقييم", chat_quick_add: "إضافة عقار", chat_quick_contact: "التواصل",
+                chatbot_empty: "اكتب سؤالك أولاً.", chatbot_eval: "فتحت لك صفحة التقييم. أدخل بيانات العقار وسأساعدك في فهم النتيجة.", chatbot_add: "فتحت لك صفحة إضافة عقار، ويمكنك اختيار المدينة والحي أو إضافة مدينة جديدة.", chatbot_contact: "يمكنك التواصل معنا عبر واتساب من قسم التواصل.", chatbot_cities: "ندعم المدينة المنورة ومكة وجدة والرياض، مع إمكانية إضافة مدن وأحياء جديدة.", chatbot_help: "أستطيع مساعدتك في التقييم، إضافة عقار، معرفة المدن والأحياء، أو الوصول إلى قسم التواصل.",
                 hero_desc: "همة المدينة العقارية الذكية لتقدير القيم السوقية للعقارات في المملكة<br>بدقة وسرعة باستخدام أحدث خوارزميات الذكاء الاصطناعي",
                 hero_btn_start: "ابدأ التقييم الآن",
                 hero_btn_about: "تعرف على المنصة",
@@ -3545,6 +3696,7 @@ CONTACT
                 eval_sub: "أدخل بيانات العقار ليُقدّر الذكاء الاصطناعي القيمة السوقية العادلة",
                 city: "المدينة",
                 district: "الحي",
+                neighborhood_placeholder: "اختر الحي",
                 type: "نوع العقار",
                 area: "المساحة (م²)",
                 rooms: "عدد الغرف",
@@ -3566,6 +3718,9 @@ CONTACT
                 share: "مشاركة",
                 clear: "مسح",
                 show: "عرض",
+                social_title: "تابعنا عبر منصات التواصل",
+                social_coming_soon: "سيتم تفعيل هذا الحساب قريباً",
+                hide: "إخفاء",
                 details_title: "تفاصيل التقييم",
                 price_range: "💰 النطاق السعري",
                 investment: "📈 مؤشر الاستثمار",
@@ -3591,10 +3746,10 @@ CONTACT
                 props_empty: "لا توجد عقارات مسجّلة بعد",
                 ai_estimate: "تقدير AI",
                 date: "التاريخ",
-                about_title: "مكتب همة المدينة",
+                about_title: "همة المدينة",
                 about_subtitle: "🕌 شريكك العقاري الموثوق في المدينة المنورة",
                 data_source: "رخصة فال العقارية: 1200030428",
-                about_text: "<strong>مكتب همة المدينة العقارية</strong> شريكك العقاري الموثوق بالمدينة المنورة، نقدم حلولاً متكاملة في <strong>التقييم العقاري الذكي</strong>، إدارة الأملاك، والتسويق العقاري وفق أعلى معايير <strong>الجودة والحوكمة</strong>.",
+                about_text: "<strong>همة المدينة العقارية</strong> شريكك العقاري الموثوق بالمدينة المنورة، نقدم حلولاً متكاملة في <strong>التقييم العقاري الذكي</strong>، إدارة الأملاك، والتسويق العقاري وفق أعلى معايير <strong>الجودة والحوكمة</strong>.",
                 about_sources: "مصادر البيانات: مؤشرات السوق العقارية 2025-2026",
                 methodology: "منهجية التقييم",
                 m1_title: "السعر الأساسي",
@@ -3607,15 +3762,36 @@ CONTACT
                 m4_desc: "تُطبق على العقارات القديمة والواجهات الأقل تفضيلاً",
                 m5_title: "التحديث الدوري",
                 m5_desc: "يتم مراجعة المؤشرات دورياً لتعكس تغيرات السوق",
+                custom_location_title: "إضافة مدينة أو حي جديد",
+                custom_location_hint: "يمكنك حفظ مدينة جديدة مع سعر متر تقريبي، ثم إضافة أحيائها.",
+                custom_city_name: "اسم المدينة",
+                custom_city_rate: "سعر المتر التقريبي",
+                custom_neighborhood_name: "اسم الحي",
+                save_custom_location: "حفظ المدينة والحي",
+                custom_location_missing: "يرجى إدخال اسم المدينة واسم الحي",
+                custom_location_saved: "تم حفظ المدينة والحي",
                 contact_heading: "تواصل معنا",
                 contact_sub: "📬 فريقنا في انتظارك — تواصل معنا لأي استفسار أو اقتراح",
+                contact_inquiry_title: "أرسل استفسارك مباشرة",
+                contact_inquiry_sub: "اكتب رسالتك وسنفتح لك محادثة واتساب جاهزة للإرسال.",
+                contact_name: "الاسم",
+                contact_subject: "نوع الاستفسار",
+                subject_buy: "شراء عقار",
+                subject_sell: "بيع عقار",
+                subject_valuation: "تقييم عقاري",
+                subject_contract: "صياغة عقد",
+                subject_other: "استفسار عام",
+                contact_message: "الرسالة",
+                contact_message_ph: "اكتب استفسارك هنا...",
+                contact_send_whatsapp: "إرسال عبر واتساب",
+                contact_form_missing: "يرجى إدخال الاسم والرسالة",
                 contact_location: "📍 الموقع",
                 contact_email: "📧 البريد الإلكتروني",
                 contact_phone: "📞 الهاتف",
                 contact_cv: "السيرة الذاتية",
                 contact_whatsapp: "واتساب",
                 contact_innovision: "Innovision Hub",
-                location_value: "الدوحة، قطر",
+                location_value: "المدينة المنورة، المملكة العربية السعودية",
                 dev_by: "تطوير:",
                 footer_privacy: "🔒 سياسة الخصوصية",
                 footer_terms: "📋 شروط الاستخدام",
@@ -3634,7 +3810,19 @@ CONTACT
                 modal_import_ok: "تم الاستيراد!",
                 modal_import_msg: "تم استيراد {count} عقار بنجاح.",
                 copied: "تم النسخ",
+                copy_failed: "تعذر النسخ، حاول مرة أخرى",
                 error_occurred: "حدث خطأ",
+                area_error: "المساحة يجب أن تكون 20 م² على الأقل",
+                city_error: "يرجى اختيار المدينة",
+                age_error: "عمر العقار لا يمكن أن يكون سالباً",
+                street_error: "عرض الشارع يجب أن يكون بين 3 و100 م",
+                rooms_error: "عدد الغرف غير صالح",
+                form_error: "يرجى تعبئة جميع الحقول بشكل صحيح",
+                excel_only: "يرجى رفع ملف Excel فقط (.xlsx أو .xls)",
+                file_empty: "الملف فارغ أو غير صالح",
+                missing_columns: "الأعمدة المطلوبة غير موجودة",
+                no_new_properties: "لم تتم إضافة عقارات جديدة",
+                file_read_error: "تعذر قراءة ملف Excel",
                 refreshed: "تم التحديث",
                 reset_done: "تم إعادة التعيين",
                 privacy_title: "🔒 سياسة الخصوصية",
@@ -3689,7 +3877,7 @@ CONTACT
                 terms_p7: "للاستفسار حول شروط الاستخدام، يرجى التواصل معنا عبر البريد الإلكتروني:",
                 cities: { "الرياض": "الرياض", "جدة": "جدة", "الدمام": "الدمام", "مكة المكرمة": "مكة المكرمة",
                     "المدينة المنورة": "المدينة المنورة" },
-                types: { "فيلا": "فيلا", "شقة سكنية": "شقة سكنية", "أرض": "أرض", "دوبلكس": "دوبلكس" },
+                types: { "الكل": "الكل", "فيلا": "فيلا", "شقة في برج": "شقة في برج", "شقة في عمارة": "شقة في عمارة", "أرض": "أرض", "دبلكس": "دبلكس", "قصر": "قصر", "مزرعة": "مزرعة", "استراحة": "استراحة", "مكتب": "مكتب", "مخزن": "مخزن", "منتجع": "منتجع", "معرض": "معرض", "عمارة": "عمارة", "محطة": "محطة", "دور": "دور" },
                 facades: { "شرقية": "شرقية (+5%)", "شمالية": "شمالية (+4%)", "جنوبية": "جنوبية",
                     "غربية": "غربية (-2%)" },
                 districts: { "حي راقي": "حي راقي (+25%)", "حي استثماري": "حي استثماري (+15%)",
@@ -3747,7 +3935,7 @@ CONTACT
                 c_unit_type: "نوع الوحدة",
                 unit_apartment: "شقة",
                 unit_villa: "فيلا",
-                unit_office: "مكتب",
+                unit_business: "وحدة تجارية",
                 unit_shop: "محل تجاري",
                 unit_land: "أرض",
                 c_district: "الحي",
@@ -3793,6 +3981,10 @@ CONTACT
                 faq6_q: "كيف أتواصل مع فريق الدعم؟",
                 faq6_a: "عبر صفحة «تواصل» يمكنك مراسلتنا واتساب أو بريد إلكتروني أو الاتصال المباشر، وفريقنا يرد خلال وقت قصير.",
 
+                vision_heading: "رؤيتنا", vision_full: "أن نكون مرجعا عقاريا موثوقا في المدينة المنورة، نختصر على العميل طريق البحث والحيرة، ونضع أمامه المعلومة الواضحة والفرصة المناسبة، ليبني قراره على معرفة لا على توقعات.",
+                mission_heading: "رسالتنا", mission_full: "أن نجعل التعامل العقاري أوضح وأسهل وأكثر ثقة، من خلال فهم احتياج العميل، ودراسة الخيارات بعناية، وتقديم خدمات عقارية احترافية في التسويق وإدارة الأملاك وكتابة العقود.",
+                goal_heading: "هدفنا", goal_full: "هدفنا ليس إتمام صفقة فحسب، بل بناء علاقة تبدأ بالثقة وتستمر بجودة الخدمة.",
+                service_buy_title: "بيع وشراء العقارات", service_buy_desc: "نساعدك على البيع والشراء بثقة، من دراسة الاحتياج حتى إتمام الصفقة.", service_market_title: "دراسة وتحليل السوق", service_market_desc: "نحلل معطيات السوق ونقارن الفرص لتتخذ قرارك على معرفة.", service_contract_title: "كتابة عقود الإيجار", service_contract_desc: "عقد يضمن حق الطرفين المؤجر والمستأجر ويقلل مساحة الخلاف.", service_manage_title: "إدارة الأملاك", service_manage_desc: "نهتم بتفاصيل عقارك لتبقى مطمئنا على استثمارك.", service_consult_title: "الاستشارات العقارية", service_consult_desc: "قبل أن تقرر، نضع أمامك صورة أوضح للخيارات والفرص.", service_marketeting_title: "التسويق العقاري", service_marketeting_desc: "نبرز قيمة عقارك ونوصله إلى الباحث الجاد بأسلوب تسويقي احترافي",
                 about_title_gold: "العقارية",
                 mv_mission_title: "رسالتنا",
                 mv_mission_desc: "تقديم خدمات عقارية احترافية تجمع بين الخبرة المحلية والشفافية والتقنية، من التقييم وإدارة الأملاك إلى التسويق وصياغة العقود.",
@@ -3804,12 +3996,17 @@ CONTACT
                 nav_home: "Home",
                 nav_eval: "Valuation",
                 nav_add: "Add",
-                nav_db: "Contracts",
+                nav_database: "Analytics",
+                nav_contracts: "Contracts",
                 nav_about: "About Us",
                 nav_testimonials: "Offers",
                 nav_faq: "FAQ",
                 nav_contact: "Contact Us",
                 hero_subtitle: "🏛️ Himmat Al Madinah Real Estate AI",
+                hero_message: "Your property decision starts with a fair value",
+                chatbot_button: "AI Assistant", chatbot_title: "Himmah AI Assistant", chatbot_placeholder: "Ask a question...", chatbot_welcome: "Hello, how can I help?",
+                chat_quick_eval: "Valuation", chat_quick_add: "Add Property", chat_quick_contact: "Contact",
+                chatbot_empty: "Please type a question first.", chatbot_eval: "I opened the valuation page. Enter the property details and I will help you understand the result.", chatbot_add: "I opened the Add Property page. You can choose a city and district or add a new city.", chatbot_contact: "You can contact us through WhatsApp from the Contact section.", chatbot_cities: "We support Madinah, Makkah, Jeddah and Riyadh, with the option to add more cities and districts.", chatbot_help: "I can help with valuation, adding a property, cities and districts, or contacting the team.",
                 hero_desc: "Your smart platform to estimate market values for properties in the Kingdom<br>with accuracy and speed using the latest AI algorithms",
                 hero_btn_start: "Start Valuation Now",
                 hero_btn_about: "Learn About Platform",
@@ -3832,6 +4029,7 @@ CONTACT
                 eval_sub: "Enter property details for AI to estimate fair market value",
                 city: "City",
                 district: "District",
+                neighborhood_placeholder: "Select a district",
                 type: "Property Type",
                 area: "Area (m²)",
                 rooms: "Rooms",
@@ -3853,6 +4051,9 @@ CONTACT
                 share: "Share",
                 clear: "Clear",
                 show: "Show",
+                social_title: "Follow us on social media",
+                social_coming_soon: "This account will be available soon",
+                hide: "Hide",
                 details_title: "Valuation Details",
                 price_range: "💰 Price Range",
                 investment: "📈 Investment Index",
@@ -3881,7 +4082,7 @@ CONTACT
                 about_title: "Himmat Al Madinah",
                 about_subtitle: "🕌 Your trusted real estate partner in Madinah",
                 data_source: "Fal Real Estate License: 1200030428",
-                about_text: "<strong>Himmat Al Madinah Real Estate Office</strong> is your trusted real estate partner in Madinah, offering integrated solutions in <strong>smart valuation</strong>, property management and real estate marketing, following the highest standards of <strong>quality and governance</strong>.",
+                about_text: "<strong>Himmat Al Madinah Real Estate</strong> is your trusted real estate partner in Madinah, offering integrated solutions in <strong>smart valuation</strong>, property management and real estate marketing, following the highest standards of <strong>quality and governance</strong>.",
                 about_sources: "Data sources: Real Estate Market Indicators 2025-2026",
                 methodology: "Valuation Methodology",
                 m1_title: "Base Price",
@@ -3894,15 +4095,36 @@ CONTACT
                 m4_desc: "Applied to older properties and less preferred facades",
                 m5_title: "Periodic Updates",
                 m5_desc: "Regularly reviewed to reflect market changes",
+                custom_location_title: "Add a city or district",
+                custom_location_hint: "Save a new city with an approximate price per square meter, then add its districts.",
+                custom_city_name: "City name",
+                custom_city_rate: "Approximate price per m²",
+                custom_neighborhood_name: "District name",
+                save_custom_location: "Save city and district",
+                custom_location_missing: "Please enter the city and district names",
+                custom_location_saved: "City and district saved",
                 contact_heading: "Contact Us",
                 contact_sub: "📬 Our team is waiting — Contact us for any inquiry or suggestion",
+                contact_inquiry_title: "Send your inquiry directly",
+                contact_inquiry_sub: "Write your message and we will open a ready-to-send WhatsApp chat.",
+                contact_name: "Name",
+                contact_subject: "Inquiry type",
+                subject_buy: "Buying a property",
+                subject_sell: "Selling a property",
+                subject_valuation: "Property valuation",
+                subject_contract: "Contract drafting",
+                subject_other: "General inquiry",
+                contact_message: "Message",
+                contact_message_ph: "Write your inquiry here...",
+                contact_send_whatsapp: "Send via WhatsApp",
+                contact_form_missing: "Please enter your name and message",
                 contact_location: "📍 Location",
                 contact_email: "📧 Email",
                 contact_phone: "📞 Phone",
                 contact_cv: "Resume",
                 contact_whatsapp: "WhatsApp",
                 contact_innovision: "Innovision Hub",
-                location_value: "Doha, Qatar",
+                location_value: "Madinah, Saudi Arabia",
                 dev_by: "Developed by:",
                 footer_privacy: "🔒 Privacy Policy",
                 footer_terms: "📋 Terms of Service",
@@ -3921,7 +4143,19 @@ CONTACT
                 modal_import_ok: "Imported!",
                 modal_import_msg: "{count} properties imported.",
                 copied: "Copied",
+                copy_failed: "Copy failed, please try again",
                 error_occurred: "An error occurred",
+                area_error: "Area must be at least 20m²",
+                city_error: "Please select a city",
+                age_error: "Property age cannot be negative",
+                street_error: "Street width must be between 3 and 100m",
+                rooms_error: "Invalid room count",
+                form_error: "Please fill all fields correctly",
+                excel_only: "Please upload an Excel file only (.xlsx or .xls)",
+                file_empty: "The file is empty or invalid",
+                missing_columns: "Required columns are missing",
+                no_new_properties: "No new properties were added",
+                file_read_error: "Unable to read the Excel file",
                 refreshed: "Refreshed",
                 reset_done: "Form reset",
                 privacy_title: "🔒 Privacy Policy",
@@ -3976,7 +4210,7 @@ CONTACT
                 terms_p7: "For inquiries about the terms of service, please contact us via email:",
                 cities: { "الرياض": "Riyadh", "جدة": "Jeddah", "الدمام": "Dammam", "مكة المكرمة": "Makkah",
                     "المدينة المنورة": "Madinah" },
-                types: { "فيلا": "Villa", "شقة سكنية": "Apartment", "أرض": "Land", "دوبلكس": "Duplex" },
+                types: { "الكل": "All", "فيلا": "Villa", "شقة في برج": "High-rise Apartment", "شقة في عمارة": "Building Apartment", "أرض": "Land", "دبلكس": "Duplex", "قصر": "Palace", "مزرعة": "Farm", "استراحة": "Rest House", "مكتب": "Business Unit", "مخزن": "Warehouse", "منتجع": "Resort", "معرض": "Showroom", "عمارة": "Residential Building", "محطة": "Station", "دور": "Floor" },
                 facades: { "شرقية": "East (+5%)", "شمالية": "North (+4%)", "جنوبية": "South",
                     "غربية": "West (-2%)" },
                 districts: { "حي راقي": "Premium (+25%)", "حي استثماري": "Investment (+15%)",
@@ -4035,7 +4269,7 @@ CONTACT
                 c_unit_type: "Unit Type",
                 unit_apartment: "Apartment",
                 unit_villa: "Villa",
-                unit_office: "Office",
+                unit_business: "Business Unit",
                 unit_shop: "Shop",
                 unit_land: "Land",
                 c_district: "District",
@@ -4081,6 +4315,10 @@ CONTACT
                 faq6_q: "How do I contact the support team?",
                 faq6_a: "Through the 'Contact' page you can reach us via WhatsApp, email, or phone, and our team responds within a short time.",
 
+                vision_heading: "Our Vision", vision_full: "To be a trusted real estate reference in Madinah, shortening the client's path through search and uncertainty by presenting clear information and suitable opportunities, so decisions are built on knowledge rather than expectations.",
+                mission_heading: "Our Mission", mission_full: "To make real estate dealings clearer, easier and more trustworthy by understanding client needs, carefully studying options, and providing professional marketing, property management and contract-writing services.",
+                goal_heading: "Our Goal", goal_full: "Our goal is not merely to complete a transaction, but to build a relationship that begins with trust and continues through service quality.",
+                service_buy_title: "Buy & Sell Real Estate", service_buy_desc: "We help you buy and sell with confidence, from understanding your needs to completing the transaction.", service_market_title: "Market Research & Analysis", service_market_desc: "We analyze market data and compare opportunities so you can decide with knowledge.", service_contract_title: "Lease Contract Writing", service_contract_desc: "A contract that protects both landlord and tenant and reduces room for dispute.", service_manage_title: "Property Management", service_manage_desc: "We care for your property's details so you can stay confident in your investment.", service_consult_title: "Real Estate Consulting", service_consult_desc: "Before you decide, we give you a clearer view of the options and opportunities.", service_marketeting_title: "Real Estate Marketing", service_marketeting_desc: "We highlight your property's value and reach serious buyers with professional marketing.",
                 about_title_gold: "Real Estate",
                 mv_mission_title: "Our Mission",
                 mv_mission_desc: "To provide professional real estate services combining local expertise, transparency and technology — from valuation and property management to marketing and contract drafting.",
@@ -4092,12 +4330,17 @@ CONTACT
                 nav_home: "Accueil",
                 nav_eval: "Évaluation",
                 nav_add: "Ajouter",
-                nav_db: "contrats",
+                nav_database: "Analyses",
+                nav_contracts: "Contrats",
                 nav_about: "À propos",
                 nav_testimonials: "Offres",
                 nav_faq: "FAQ",
                 nav_contact: "Contact",
                 hero_subtitle: "🏛️ IA Himmat Al Madinah Real Estate",
+                hero_message: "Votre décision immobilière commence par une valeur juste",
+                chatbot_button: "Assistant intelligent", chatbot_title: "Assistant IA Himmah", chatbot_placeholder: "Écrivez votre question...", chatbot_welcome: "Bonjour, comment puis-je vous aider ?",
+                chat_quick_eval: "Évaluation", chat_quick_add: "Ajouter", chat_quick_contact: "Contact",
+                chatbot_empty: "Écrivez d’abord une question.", chatbot_eval: "J’ai ouvert l’évaluation. Saisissez les données du bien et je vous aiderai à comprendre le résultat.", chatbot_add: "J’ai ouvert l’ajout d’un bien. Vous pouvez choisir une ville et un quartier ou ajouter une nouvelle ville.", chatbot_contact: "Vous pouvez nous contacter via WhatsApp depuis la section Contact.", chatbot_cities: "Nous couvrons Médine, La Mecque, Djeddah et Riyad, avec la possibilité d’ajouter d’autres villes et quartiers.", chatbot_help: "Je peux vous aider pour l’évaluation, l’ajout d’un bien, les villes et quartiers ou le contact.",
                 hero_desc: "Votre plateforme intelligente pour estimer les valeurs du marché immobilier au Royaume<br>avec précision et rapidité grâce aux derniers algorithmes d'IA",
                 hero_btn_start: "Commencer l'évaluation",
                 hero_btn_about: "Découvrir la plateforme",
@@ -4120,6 +4363,7 @@ CONTACT
                 eval_sub: "Entrez les détails du bien pour une estimation en temps réel",
                 city: "Ville",
                 district: "Quartier",
+                neighborhood_placeholder: "Choisir un quartier",
                 type: "Type de bien",
                 area: "Surface (m²)",
                 rooms: "Pièces",
@@ -4141,6 +4385,9 @@ CONTACT
                 share: "Partager",
                 clear: "Effacer",
                 show: "Afficher",
+                social_title: "Suivez-nous sur les réseaux sociaux",
+                social_coming_soon: "Ce compte sera bientôt disponible",
+                hide: "Masquer",
                 details_title: "Détails de l'évaluation",
                 price_range: "💰 Fourchette estimée",
                 investment: "📈 Indice d'investissement",
@@ -4169,7 +4416,7 @@ CONTACT
                 about_title: "Himmat Al Madinah",
                 about_subtitle: "🕌 Votre partenaire immobilier de confiance à Médine",
                 data_source: "Licence immobilière Fal : 1200030428",
-                about_text: "<strong>Le bureau Himmat Al Madinah</strong> est votre partenaire immobilier de confiance à Médine. Nous proposons des solutions intégrées en <strong>évaluation intelligente</strong>, gestion de biens et marketing immobilier, selon les plus hauts standards de <strong>qualité et de gouvernance</strong>.",
+                about_text: "<strong>Le Himmat Al Madinah</strong> est votre partenaire immobilier de confiance à Médine. Nous proposons des solutions intégrées en <strong>évaluation intelligente</strong>, gestion de biens et marketing immobilier, selon les plus hauts standards de <strong>qualité et de gouvernance</strong>.",
                 about_sources: "Sources: Indicateurs du marché 2025-2026",
                 methodology: "Méthodologie d'évaluation",
                 m1_title: "Prix de base",
@@ -4182,15 +4429,36 @@ CONTACT
                 m4_desc: "Biens anciens et façades moins prisées",
                 m5_title: "Mises à jour",
                 m5_desc: "Révisées régulièrement pour refléter le marché",
+                custom_location_title: "Ajouter une ville ou un quartier",
+                custom_location_hint: "Enregistrez une ville avec un prix approximatif au m², puis ajoutez ses quartiers.",
+                custom_city_name: "Nom de la ville",
+                custom_city_rate: "Prix approximatif au m²",
+                custom_neighborhood_name: "Nom du quartier",
+                save_custom_location: "Enregistrer la ville et le quartier",
+                custom_location_missing: "Veuillez saisir la ville et le quartier",
+                custom_location_saved: "Ville et quartier enregistrés",
                 contact_heading: "Contactez-nous",
                 contact_sub: "📬 Notre équipe vous attend — Contactez-nous pour toute question",
+                contact_inquiry_title: "Envoyez votre demande directement",
+                contact_inquiry_sub: "Écrivez votre message et nous ouvrirons une conversation WhatsApp prête à envoyer.",
+                contact_name: "Nom",
+                contact_subject: "Type de demande",
+                subject_buy: "Acheter un bien",
+                subject_sell: "Vendre un bien",
+                subject_valuation: "Évaluation immobilière",
+                subject_contract: "Rédaction de contrat",
+                subject_other: "Demande générale",
+                contact_message: "Message",
+                contact_message_ph: "Écrivez votre demande ici...",
+                contact_send_whatsapp: "Envoyer via WhatsApp",
+                contact_form_missing: "Veuillez saisir votre nom et votre message",
                 contact_location: "📍 Lieu",
                 contact_email: "📧 E-mail",
                 contact_phone: "📞 Téléphone",
                 contact_cv: "CV",
                 contact_whatsapp: "WhatsApp",
                 contact_innovision: "Innovision Hub",
-                location_value: "Doha, Qatar",
+                location_value: "Madinah, Saudi Arabia",
                 dev_by: "Développé par:",
                 footer_privacy: "🔒 Politique de confidentialité",
                 footer_terms: "📋 Conditions d'utilisation",
@@ -4209,7 +4477,19 @@ CONTACT
                 modal_import_ok: "Importé!",
                 modal_import_msg: "{count} biens importés.",
                 copied: "Copié",
+                copy_failed: "Échec de la copie, veuillez réessayer",
                 error_occurred: "Erreur",
+                area_error: "La surface doit être d'au moins 20 m²",
+                city_error: "Veuillez sélectionner une ville",
+                age_error: "L'âge du bien ne peut pas être négatif",
+                street_error: "La largeur de rue doit être comprise entre 3 et 100 m",
+                rooms_error: "Nombre de pièces invalide",
+                form_error: "Veuillez remplir correctement tous les champs",
+                excel_only: "Veuillez importer uniquement un fichier Excel (.xlsx ou .xls)",
+                file_empty: "Le fichier est vide ou invalide",
+                missing_columns: "Les colonnes requises sont manquantes",
+                no_new_properties: "Aucun nouveau bien n'a été ajouté",
+                file_read_error: "Impossible de lire le fichier Excel",
                 refreshed: "Actualisé",
                 reset_done: "Réinitialisé",
                 privacy_title: "🔒 Politique de confidentialité",
@@ -4264,7 +4544,7 @@ CONTACT
                 terms_p7: "Pour toute question, veuillez nous contacter par email:",
                 cities: { "الرياض": "Riyad", "جدة": "Djeddah", "الدمام": "Dammam", "مكة المكرمة": "La Mecque",
                     "المدينة المنورة": "Médine" },
-                types: { "فيلا": "Villa", "شقة سكنية": "Appartement", "أرض": "Terrain", "دوبلكس": "Duplex" },
+                types: { "الكل": "Tous", "فيلا": "Villa", "شقة في برج": "Appartement en tour", "شقة في عمارة": "Appartement en immeuble", "أرض": "Terrain", "دبلكس": "Duplex", "قصر": "Palais", "مزرعة": "Ferme", "استراحة": "Maison de repos", "مكتب": "Unité commerciale", "مخزن": "Entrepôt", "منتجع": "Complexe", "معرض": "Showroom", "عمارة": "Immeuble résidentiel", "محطة": "Station", "دور": "Étage" },
                 facades: { "شرقية": "Est (+5%)", "شمالية": "Nord (+4%)", "جنوبية": "Sud",
                     "غربية": "Ouest (-2%)" },
                 districts: { "حي راقي": "Premium (+25%)", "حي استثماري": "Investissement (+15%)",
@@ -4323,7 +4603,7 @@ CONTACT
                 c_unit_type: "Type d'unité",
                 unit_apartment: "Appartement",
                 unit_villa: "Villa",
-                unit_office: "Bureau",
+                unit_business: "Unité commerciale",
                 unit_shop: "Local commercial",
                 unit_land: "Terrain",
                 c_district: "Quartier",
@@ -4369,6 +4649,10 @@ CONTACT
                 faq6_q: "Comment contacter l'équipe support ?",
                 faq6_a: "Via la page « Contact », vous pouvez nous joindre par WhatsApp, e-mail ou téléphone, et notre équipe répond rapidement.",
 
+                vision_heading: "Notre Vision", vision_full: "Devenir une référence immobilière de confiance à Médine, en raccourcissant le chemin de recherche et d’hésitation grâce à des informations claires et des opportunités adaptées, pour décider en connaissance de cause.",
+                mission_heading: "Notre Mission", mission_full: "Rendre les transactions immobilières plus claires, simples et fiables en comprenant les besoins du client, en étudiant soigneusement les options et en proposant des services professionnels de marketing, de gestion et de rédaction de contrats.",
+                goal_heading: "Notre Objectif", goal_full: "Notre objectif n’est pas seulement de conclure une transaction, mais de bâtir une relation qui commence par la confiance et se poursuit par la qualité du service.",
+                service_buy_title: "Achat et vente immobilière", service_buy_desc: "Nous vous aidons à acheter et vendre en confiance, de l’étude du besoin à la conclusion de la transaction.", service_market_title: "Étude et analyse du marché", service_market_desc: "Nous analysons les données du marché et comparons les opportunités pour vous aider à décider en connaissance de cause.", service_contract_title: "Rédaction de contrats de location", service_contract_desc: "Un contrat qui protège les droits du bailleur et du locataire et réduit les risques de désaccord.", service_manage_title: "Gestion des biens", service_manage_desc: "Nous prenons soin des détails de votre bien pour vous rassurer sur votre investissement.", service_consult_title: "Conseil immobilier", service_consult_desc: "Avant de décider, nous vous offrons une vision plus claire des options et des opportunités.", service_marketeting_title: "Marketing immobilier", service_marketeting_desc: "Nous valorisons votre bien et le présentons aux acquéreurs sérieux avec un marketing professionnel.",
                 about_title_gold: "Immobilier",
                 mv_mission_title: "Notre Mission",
                 mv_mission_desc: "Offrir des services immobiliers professionnels alliant expertise locale, transparence et technologie — de l'évaluation et la gestion de biens au marketing et à la rédaction de contrats.",
@@ -4384,6 +4668,47 @@ CONTACT
             return translations[currentLang]?.[k] ?? translations.ar[k] ?? k;
         }
 
+        function parseNumber(value) {
+            if (value === null || value === undefined || String(value).trim() === '') return NaN;
+            const normalized = String(value)
+                .trim()
+                .replace(/[٬،]/g, '')
+                .replace(/,/g, '')
+                .replace(/[٠-٩]/g, digit => String('٠١٢٣٤٥٦٧٨٩'.indexOf(digit)))
+                .replace(/[٫]/g, '.');
+            const number = Number(normalized);
+            return Number.isFinite(number) ? number : NaN;
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, char => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[char]));
+        }
+
+        async function copyToClipboard(text) {
+            if (!text) return false;
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                    return true;
+                }
+                const area = document.createElement('textarea');
+                area.value = text;
+                area.setAttribute('readonly', '');
+                area.style.position = 'fixed';
+                area.style.opacity = '0';
+                document.body.appendChild(area);
+                area.select();
+                const copied = document.execCommand('copy');
+                area.remove();
+                return copied;
+            } catch (error) {
+                console.warn('Clipboard unavailable:', error);
+                return false;
+            }
+        }
+
         function showToast(msg, duration = 3000) {
             const el = document.getElementById('toast');
             el.textContent = msg;
@@ -4396,10 +4721,18 @@ CONTACT
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalMessage').textContent = msg;
             document.getElementById('modalIcon').className = icon;
-            document.getElementById('customModal').classList.add('show');
+            const modal = document.getElementById('customModal');
+            modalAction = null;
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden', 'false');
         }
 
-        function closeModal() { document.getElementById('customModal').classList.remove('show'); }
+        function closeModal() {
+            const modal = document.getElementById('customModal');
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden', 'true');
+            document.getElementById('modalCloseBtn').onclick = null;
+        }
 
         function debounce(func, wait) {
             let timeout;
@@ -4409,6 +4742,67 @@ CONTACT
                 clearTimeout(timeout);
                 timeout = setTimeout(later, wait);
             };
+        }
+
+        function getLocationRecords() {
+            const custom = JSON.parse(localStorage.getItem('himmat_custom_locations') || '{}');
+            return { ...MARKET_CONFIG.neighborhoods_by_city, ...Object.fromEntries(Object.entries(custom).map(([name, value]) => [name, value.neighborhoods || []])) };
+        }
+
+        function getAllCities() { return Object.keys(getLocationRecords()); }
+
+        function refreshNeighborhoodOptions(selectId, city, preferred = '') {
+            const select = document.getElementById(selectId);
+            if (!select) return;
+            const neighborhoods = getLocationRecords()[city] || [];
+            select.innerHTML = '';
+            if (!neighborhoods.length) {
+                const option = new Option(t('neighborhood_placeholder') || t('district'), '');
+                select.appendChild(option);
+            } else {
+                neighborhoods.forEach(name => select.appendChild(new Option(name, name)));
+            }
+            if (preferred && neighborhoods.includes(preferred)) select.value = preferred;
+            else if (neighborhoods.length) select.value = neighborhoods.includes('النخيل') ? 'النخيل' : neighborhoods[0];
+        }
+
+        function refreshLocationOptions() {
+            ['mainCity', 'addCity'].forEach(id => {
+                const select = document.getElementById(id);
+                if (!select) return;
+                const current = select.value;
+                select.innerHTML = '';
+                getAllCities().forEach(city => select.appendChild(new Option(city, city)));
+                if (getAllCities().includes(current)) select.value = current;
+            });
+            refreshNeighborhoodOptions('mainNeighborhood', document.getElementById('mainCity')?.value, document.getElementById('mainNeighborhood')?.value);
+            refreshNeighborhoodOptions('addLocation', document.getElementById('addCity')?.value, document.getElementById('addLocation')?.value);
+        }
+
+        function saveCustomLocation() {
+            const city = document.getElementById('customCityName').value.trim();
+            const neighborhood = document.getElementById('customNeighborhoodName').value.trim();
+            const rate = parseNumber(document.getElementById('customCityRate').value);
+            if (!city || !neighborhood || !Number.isFinite(rate) || rate < 100) {
+                showToast('⚠️ ' + t('custom_location_missing'), 3500);
+                return;
+            }
+            const custom = JSON.parse(localStorage.getItem('himmat_custom_locations') || '{}');
+            const record = custom[city] || { rate, neighborhoods: [] };
+            record.rate = rate;
+            record.neighborhoods = [...new Set([...(record.neighborhoods || []), neighborhood])];
+            custom[city] = record;
+            localStorage.setItem('himmat_custom_locations', JSON.stringify(custom));
+            const key = 'custom_' + city;
+            MARKET_CONFIG.city_aliases[city] = key;
+            MARKET_CONFIG.city_base_rates[key] = rate;
+            refreshLocationOptions();
+            document.getElementById('mainCity').value = city;
+            document.getElementById('addCity').value = city;
+            refreshNeighborhoodOptions('mainNeighborhood', city, neighborhood);
+            refreshNeighborhoodOptions('addLocation', city, neighborhood);
+            document.getElementById('customNeighborhoodName').value = '';
+            showToast('✅ ' + t('custom_location_saved'));
         }
 
         function normalizeCity(city) {
@@ -4568,12 +4962,19 @@ CONTACT
 
         function validateInput(data) {
             const errors = [];
-            if (!data.area || data.area < 20) errors.push('⚠️ ' + (t('area_error') || 'Area must be at least 20m²'));
+            if (!Number.isFinite(data.area) || data.area < 20) {
+                errors.push('⚠️ ' + (t('area_error') || 'Area must be at least 20m²'));
+            }
             if (!data.city) errors.push('⚠️ ' + (t('city_error') || 'Please select a city'));
-            if (data.age < 0) errors.push('⚠️ ' + (t('age_error') || 'Age cannot be negative'));
-            if (data.street_width < 3 || data.street_width > 100) errors.push('⚠️ ' + (t('street_error') ||
-                'Street width must be 3-100m'));
-            if (data.rooms < 0 || data.rooms > 20) errors.push('⚠️ ' + (t('rooms_error') || 'Invalid room count'));
+            if (!Number.isFinite(data.age) || data.age < 0) {
+                errors.push('⚠️ ' + (t('age_error') || 'Age cannot be negative'));
+            }
+            if (!Number.isFinite(data.street_width) || data.street_width < 3 || data.street_width > 100) {
+                errors.push('⚠️ ' + (t('street_error') || 'Street width must be 3-100m'));
+            }
+            if (!Number.isFinite(data.rooms) || data.rooms < 0 || data.rooms > 20) {
+                errors.push('⚠️ ' + (t('rooms_error') || 'Invalid room count'));
+            }
             return errors;
         }
 
@@ -4595,11 +4996,11 @@ CONTACT
                 city: document.getElementById('mainCity').value,
                 neighborhood: document.getElementById('mainNeighborhood').value,
                 property_type: document.getElementById('mainPropertyType').value,
-                area: parseFloat(document.getElementById('mainArea').value) || 350,
-                rooms: parseInt(document.getElementById('mainRooms').value) || 4,
-                age: parseInt(document.getElementById('mainAge').value) || 0,
+                area: parseNumber(document.getElementById('mainArea').value),
+                rooms: parseNumber(document.getElementById('mainRooms').value),
+                age: parseNumber(document.getElementById('mainAge').value),
                 facade: document.getElementById('mainFacade').value,
-                street_width: parseFloat(document.getElementById('mainStreetWidth').value) || 20,
+                street_width: parseNumber(document.getElementById('mainStreetWidth').value),
                 location_grade: document.getElementById('mainLocationType').value,
                 has_elevator: document.getElementById('elevator').checked,
                 has_pool: document.getElementById('pool').checked,
@@ -4701,6 +5102,7 @@ CONTACT
         }
 
         function setLanguage(lang) {
+            if (!translations[lang]) lang = 'ar';
             if (lang === currentLang) return;
             currentLang = lang;
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
@@ -4708,7 +5110,10 @@ CONTACT
             document.documentElement.lang = lang;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const k = el.dataset.i18n;
-                if (translations[lang]?.[k]) el.textContent = translations[lang][k];
+                const value = translations[lang]?.[k];
+                if (value === undefined) return;
+                if (/<[a-z][\s\S]*>/i.test(value)) el.innerHTML = value;
+                else el.textContent = value;
             });
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const k = el.dataset.i18nPlaceholder;
@@ -4766,11 +5171,11 @@ CONTACT
             empty.style.display = 'none';
             tbody.innerHTML = props.map(p => `
                         <tr>
-                            <td>${translations[currentLang].cities[p.city] || p.city}</td>
-                            <td>${p.neighborhood || '—'}</td>
-                            <td>${(p.price || 0).toLocaleString()} ${t('sar')}</td>
-                            <td>${(p.ai_estimate || 0).toLocaleString()} ${t('sar')}</td>
-                            <td style="font-size:0.55rem;color:var(--muted);">${p.created_at ? new Date(p.created_at).toLocaleDateString() : '—'}</td>
+                            <td>${escapeHtml(translations[currentLang].cities[p.city] || p.city)}</td>
+                            <td>${escapeHtml(p.neighborhood || '—')}</td>
+                            <td>${Number(p.price || 0).toLocaleString()} ${escapeHtml(t('sar'))}</td>
+                            <td>${Number(p.ai_estimate || 0).toLocaleString()} ${escapeHtml(t('sar'))}</td>
+                            <td style="font-size:0.55rem;color:var(--muted);">${p.created_at ? escapeHtml(new Date(p.created_at).toLocaleDateString()) : '—'}</td>
                         </tr>
                     `).join('');
         }
@@ -4809,16 +5214,12 @@ CONTACT
 
         function clearAllData() {
             showModal(t('modal_clear_confirm'), t('modal_clear_msg'), 'fa-solid fa-triangle-exclamation');
-            const closeBtn = document.getElementById('modalCloseBtn');
-            const originalClick = closeBtn.onclick;
-            closeBtn.onclick = function() {
+            modalAction = () => {
                 saveLocalProps([]);
                 importedProperties = [];
                 loadProperties();
                 initChart();
-                closeModal();
                 showToast('🗑️ ' + t('modal_clear_done_msg'));
-                closeBtn.onclick = originalClick;
             };
         }
 
@@ -4867,10 +5268,11 @@ CONTACT
                         const city = String(row[colMap.city] || '').trim();
                         const neighborhood = String(row[colMap.neighborhood] || '').trim();
                         const type = String(row[colMap.type] || '').trim();
-                        const price = parseFloat(row[colMap.price]) || 0;
-                        const area = parseFloat(row[colMap.area]) || 0;
+                        const price = parseNumber(row[colMap.price]);
+                        const area = parseNumber(row[colMap.area]);
 
-                        if (!city || !neighborhood || !type || price < 10000 || area < 20) return;
+                        if (!city || !neighborhood || !type || !Number.isFinite(price) || price < 10000 ||
+                            !Number.isFinite(area) || area < 20) return;
 
                         let typeKey = type;
                         const typeMap = {
@@ -4892,6 +5294,7 @@ CONTACT
                         }
 
                         let cityKey = city;
+                        const cityLower = city.toLowerCase();
                         const cityMap = {
                             'الرياض': 'الرياض',
                             'riyadh': 'الرياض',
@@ -4980,13 +5383,18 @@ CONTACT
                 showModal(t('modal_no_data'), t('modal_no_data_msg'), 'fa-solid fa-circle-exclamation');
                 return;
             }
-            const headers = ['city', 'neighborhood', 'price', 'area', 'ai_estimate', 'created_at'];
-            const csvRows = props.map(p => headers.map(h => p[h] || '').join(','));
-            const csv = headers.join(',') + '\n' + csvRows.join('\n');
+            const headers = ['city', 'neighborhood', 'property_type', 'price', 'area', 'ai_estimate', 'created_at'];
+            const csvCell = value => `"${String(value ?? '').replace(/"/g, '""')}"`;
+            const csvRows = props.map(p => headers.map(h => csvCell(p[h])).join(','));
+            const csv = '\uFEFF' + headers.map(csvCell).join(',') + '\n' + csvRows.join('\n');
+            const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
             const a = document.createElement('a');
-            a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
-            a.download = 'saudiaqarai_export.csv';
+            a.href = url;
+            a.download = `saudiaqarai_export_${new Date().toISOString().slice(0, 10)}.csv`;
+            document.body.appendChild(a);
             a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
             showModal(t('modal_export_ok'), t('modal_export_msg'));
         }
 
@@ -5182,12 +5590,11 @@ CONTACT
             document.getElementById('contractOutputWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function copyContract() {
+        async function copyContract() {
             const text = document.getElementById('contractOutput').textContent;
             if (!text) return;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast('✅ ' + t('copied'));
-            }).catch(() => {});
+            if (await copyToClipboard(text)) showToast('✅ ' + t('copied'));
+            else showToast('⚠️ ' + (t('copy_failed') || 'Copy failed'), 3500);
         }
 
         function printContract() {
@@ -5196,6 +5603,7 @@ CONTACT
                 generateContract();
                 text = document.getElementById('contractOutput')?.textContent;
             }
+            if (!text) return;
             const w = window.open('', '_blank');
             if (!w) return;
             w.document.write(`<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><title>${t('c_output_title')}</title>
@@ -5232,7 +5640,7 @@ CONTACT
         // ============================================================
         // 13. SHARE FUNCTION
         // ============================================================
-        function shareResults() {
+        async function shareResults() {
             const price = document.getElementById('priceRangeDisplay').textContent;
             const investment = document.getElementById('investmentIndex').textContent;
             const text =
@@ -5244,13 +5652,40 @@ CONTACT
                     text: text,
                     url: window.location.href
                 }).catch(() => {});
+            } else if (await copyToClipboard(text)) {
+                showToast('✅ ' + (t('copied') || 'Copied'));
             } else {
-                navigator.clipboard.writeText(text).then(() => {
-                    showToast('✅ ' + (t('copied') || 'Copied'));
-                }).catch(() => {
-                    showModal(t('share'), text, 'fa-regular fa-copy');
-                });
+                showModal(t('share'), text, 'fa-regular fa-copy');
             }
+        }
+
+        function chatbotReply(text) {
+            const q = text.trim().toLowerCase();
+            if (q.includes('تقييم') || q.includes('valuation') || q.includes('évaluation')) { switchTab('evaluate'); return t('chatbot_eval'); }
+            if (q.includes('إضافة') || q.includes('اضاف') || q.includes('add') || q.includes('ajout')) { switchTab('add'); return t('chatbot_add'); }
+            if (q.includes('تواصل') || q.includes('واتساب') || q.includes('contact') || q.includes('whatsapp')) { switchTab('contact'); return t('chatbot_contact'); }
+            if (q.includes('مدينة') || q.includes('مدن') || q.includes('city') || q.includes('ville')) return t('chatbot_cities');
+            return t('chatbot_help');
+        }
+        function addChatMessage(text, role) { const box=document.getElementById('aiChatMessages'); const msg=document.createElement('div'); msg.className=`ai-msg ${role}`; msg.textContent=text; box.appendChild(msg); box.scrollTop=box.scrollHeight; }
+        function sendChatMessage(text) { if (!text.trim()) return; addChatMessage(text.trim(),'user'); setTimeout(()=>addChatMessage(chatbotReply(text),'bot'),120); }
+
+        function openContactWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('contactName').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            const subjectSelect = document.getElementById('contactSubject');
+            const subject = subjectSelect.options[subjectSelect.selectedIndex]?.text || t('subject_other');
+            if (!name || !message) {
+                showToast('⚠️ ' + t('contact_form_missing'), 3500);
+                if (!name) document.getElementById('contactName').focus();
+                else document.getElementById('contactMessage').focus();
+                return;
+            }
+            const text = `${t('contact_name')}: ${name}\n${t('contact_subject')}: ${subject}\n${t('contact_message')}: ${message}`;
+            const url = `https://wa.me/966530500906?text=${encodeURIComponent(text)}`;
+            const popup = window.open(url, '_blank', 'noopener,noreferrer');
+            if (!popup) window.location.href = url;
         }
 
         // ============================================================
@@ -5289,27 +5724,50 @@ CONTACT
                 }
             });
 
-            document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+            document.getElementById('modalCloseBtn').addEventListener('click', () => {
+                const action = modalAction;
+                modalAction = null;
+                closeModal();
+                if (action) action();
+            });
             document.getElementById('customModal').addEventListener('click', e => {
                 if (e.target.id === 'customModal') closeModal();
             });
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                    modalAction = null;
+                    closeModal();
+                }
+            });
 
             document.querySelectorAll('.live-input').forEach(el => {
                 el.addEventListener('input', scheduleRefresh);
                 el.addEventListener('change', scheduleRefresh);
             });
 
+            document.getElementById('contactForm').addEventListener('submit', openContactWhatsApp);
+            const chatPanel=document.getElementById('aiChatPanel'); const chatToggle=document.getElementById('aiChatToggle');
+            chatToggle.addEventListener('click',()=>{const open=chatPanel.hidden; chatPanel.hidden=!open; chatToggle.setAttribute('aria-expanded',String(open)); if(open&&!document.getElementById('aiChatMessages').children.length)addChatMessage(t('chatbot_welcome'),'bot');});
+            document.getElementById('aiChatClose').addEventListener('click',()=>{chatPanel.hidden=true;chatToggle.setAttribute('aria-expanded','false');});
+            document.getElementById('aiChatForm').addEventListener('submit',e=>{e.preventDefault();const input=document.getElementById('aiChatInput');sendChatMessage(input.value);input.value='';});
+            document.querySelectorAll('[data-chat-prompt]').forEach(btn=>btn.addEventListener('click',()=>sendChatMessage(btn.dataset.chatPrompt)));
+            document.getElementById('mainCity').addEventListener('change', () => { refreshNeighborhoodOptions('mainNeighborhood', document.getElementById('mainCity').value); scheduleRefresh(); });
+            document.getElementById('addCity').addEventListener('change', () => refreshNeighborhoodOptions('addLocation', document.getElementById('addCity').value));
+            document.getElementById('saveCustomLocationBtn').addEventListener('click', saveCustomLocation);
+            Object.entries(JSON.parse(localStorage.getItem('himmat_custom_locations') || '{}')).forEach(([city, value]) => { const key = 'custom_' + city; MARKET_CONFIG.city_aliases[city] = key; MARKET_CONFIG.city_base_rates[key] = Number(value.rate) || 4100; });
+            refreshLocationOptions();
+
             document.getElementById('addPropertyForm').addEventListener('submit', async e => {
                 e.preventDefault();
                 const data = {
                     city: document.getElementById('addCity').value,
-                    neighborhood: document.getElementById('addLocation').value,
+                    neighborhood: document.getElementById('addLocation').value.trim(),
                     property_type: document.getElementById('addPropertyType').value,
-                    price: +document.getElementById('addPrice').value,
-                    area: +document.getElementById('addAreaAdd').value
+                    price: parseNumber(document.getElementById('addPrice').value),
+                    area: parseNumber(document.getElementById('addAreaAdd').value)
                 };
-                if (!data.neighborhood || data.price < 10000 || data.area < 20) {
+                if (!data.neighborhood || !Number.isFinite(data.price) || data.price < 10000 ||
+                    !Number.isFinite(data.area) || data.area < 20) {
                     showToast('⚠️ ' + (t('form_error') || 'Please fill all fields correctly'), 4000);
                     return;
                 }
@@ -5352,10 +5810,22 @@ CONTACT
             fileInput.addEventListener('change', (e) => {
                 if (e.target.files.length > 0) {
                     const file = e.target.files[0];
-                    fileName.textContent = '📄 ' + file.name;
-                    handleExcelFile(file);
+                    const ext = file.name.split('.').pop().toLowerCase();
+                    if (!['xlsx', 'xls'].includes(ext)) {
+                        showToast('⚠️ ' + (t('excel_only') || 'Please upload Excel file only (.xlsx, .xls)'), 4000);
+                    } else {
+                        fileName.textContent = '📄 ' + file.name;
+                        handleExcelFile(file);
+                    }
                 }
                 fileInput.value = '';
+            });
+
+            document.querySelectorAll('[data-coming-soon="true"]').forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    showToast('ℹ️ ' + t('social_coming_soon'), 2500);
+                });
             });
 
             document.getElementById('exportCsvBtn').addEventListener('click', exportCsv);
@@ -5387,13 +5857,15 @@ CONTACT
                 showToast('🔄 ' + (t('reset_done') || 'Form reset'), 2000);
             });
 
+            document.getElementById('toggleDetailsBtn').setAttribute('aria-expanded', 'false');
             document.getElementById('toggleDetailsBtn').addEventListener('click', function() {
                 const content = document.getElementById('detailsContent');
                 const isHidden = content.style.display === 'none';
                 content.style.display = isHidden ? 'block' : 'none';
                 this.innerHTML = isHidden ?
-                    '<i class="fa-solid fa-chevron-up"></i> ' + t('show') :
-                    '<i class="fa-solid fa-chevron-down"></i> ' + t('show');
+                    '<i class="fa-solid fa-chevron-up"></i> <span data-i18n="hide">' + t('hide') + '</span>' :
+                    '<i class="fa-solid fa-chevron-down"></i> <span data-i18n="show">' + t('show') + '</span>';
+                this.setAttribute('aria-expanded', String(isHidden));
             });
 
             window.addEventListener('error', function(e) {
